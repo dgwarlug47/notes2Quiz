@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Random Quiz Generator</h1>
+            <p>Test your knowledge with questions from your notes!</p>
+        </header>
+
+        <div class="quiz-container">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading questions...</p>
+            </div>
+
+            <div id="quiz-content" class="quiz-content" style="display: none;">
+                <div class="question-header">
+                    <span id="question-number" class="question-number"></span>
+                    <button id="new-question-btn" class="new-question-btn">New Question</button>
+                </div>
+
+                <div id="question-text" class="question-text"></div>
+
+                <div id="answer-options" class="answer-options"></div>
+
+                <div id="result-section" class="result-section" style="display: none;">
+                    <div id="result-message" class="result-message"></div>
+                    <div id="correct-answer" class="correct-answer"></div>
+                    <div id="response-section" class="response-section">
+                        <h4>📝 Full Response:</h4>
+                        <div id="full-response" class="full-response"></div>
+                    </div>
+                    <button id="next-question-btn" class="next-question-btn">Next Question</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Questions Answered:</span>
+                        <span id="questions-answered">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Correct:</span>
+                        <span id="correct-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Accuracy:</span>
+                        <span id="accuracy">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-message" style="display: none;">
+                <h3>⚠️ Error Loading Quiz</h3>
+                <p>Could not load quiz questions. Please make sure the quiz_questions.json file is available.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
