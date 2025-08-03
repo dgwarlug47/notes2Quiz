@@ -16,7 +16,7 @@
 {
   "category": "Arts/Performing arts",
   "specific": "Moving pictures/Cinema/Other/rom_coms.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The text presents summaries of various movies, such as \"500 Days of Summer,\" \"Yes Man\", \"It's Kind of a Funny Story\", through the lens of Aristotle's philosophical concepts and virtues.",
   "question": "What term best describes the movie \"50 First Dates\" from an Aristotelian point of view?",
   "alternatives": [
@@ -42,7 +42,7 @@
 },{
   "category": "Arts/Literature",
   "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
-  "difficulty": "hard",
+  "difficulty": "Hard",
   "context": "This text describes Dante's journey through the various levels of Heaven in his work \"The Divine Comedy.\"",
   "question": "What is the main theme of Dante's encounter with the souls in the sphere of Mars in the Divine Comedy?",
   "alternatives": [
@@ -68,7 +68,7 @@
 },{
   "category": "Science/Social Sciences",
   "specific": "Politics/G7/USA/republicans_and_democrats.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "This text explains how the Republican Party transitioned from the era of Abraham Lincoln to the current time of Donald Trump, highlighting key turning points in the party's history.",
   "question": "What was the Turning Point in the transformation of the Republican Party from Abraham Lincoln to Donald Trump?",
   "alternatives": [
@@ -81,7 +81,7 @@
 },{
   "category": "Science/Natural Science",
   "specific": "Urban Geography/USA/Manhattan/Upper East side/ues.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The text provides a detailed overview of the Upper East Side in New York City, covering aspects like history, personalities, landmarks, films, and books related to the area.",
   "question": "What was the reason that allowed those of old money to move to the Upper East Side as well as new families in 1895?",
   "alternatives": [
@@ -94,20 +94,20 @@
 },{
   "category": "Arts/Literature",
   "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
-  "difficulty": "hard",
+  "difficulty": "Hard",
   "context": "The context is a detailed look at the themes discussed in the book 'Infinite Jest,' including addiction, loneliness, American culture, and the complexities of the Korean Mafia.",
   "question": "What is the key point in the Marathe's critique of hedonism in Infinite Jest?",
   "alternatives": [
-    "Hedonism should not dictate our personal temple; surrender to desire signals disastrous consequences.",
-    "Hedonism leads to ultimate joy and fulfillment, benefiting individual sentiment.",
-    "Hedonism leads to a solitary existence, free of distractions.",
-    "Hedonism promotes self-joy with no negative consequences."
+    "Hedonism should not dictate our personal temple; surrender to desire signals disastrous consequences",
+    "Hedonism leads to ultimate joy and fulfillment, benefiting individual sentiment",
+    "Hedonism leads to a solitary existence, free of distractions",
+    "Hedonism promotes self-joy with no negative consequences"
   ],
-  "answer": "Hedonism promotes self-joy with no negative consequences."
+  "answer": "Hedonism should not dictate our personal temple; surrender to desire signals disastrous consequences"
 },{
   "category": "Arts/Literature",
   "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is the intricate examination of literary themes and philosophical concepts within the story \"Infinite Jest,\" weaving together elements of addiction, tennis as a metaphor for modern life, American culture critique, and deep insights into the human condition.",
   "question": "What did Clipperton's devastating action highlight about success?",
   "alternatives": [
@@ -120,7 +120,7 @@
 },{
   "category": "Science/Natural Science",
   "specific": "Biology/Taxonomy/main.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is a brief overview of the six kingdoms of life based on their cellular structure, nutrition, and reproduction methods.",
   "question": "In which kingdom do organisms perform photosynthesis using chlorophyll?",
   "alternatives": [
@@ -135,7 +135,7 @@
   "specific": "History/Rome/basics.md",
   "difficulty": "Medium",
   "context": "The context is the gradual weakening of the Roman military due to the end of expansion, loss of slaves and war treasures, and internal struggles between the East and West Roman Empire.",
-  "question": "What was one of the major factors contributing to the weakening of the Roman military as the empire progressed towards its fall?",
+  "question": "What was one of the major factors contributing to the weakening of the Eastern Roman military as the empire progressed towards its fall?",
   "alternatives": [
     "Loss of North Africa",
     "Division of Empire between East and West",
@@ -189,16 +189,16 @@
   "context": "The context is a deep dive into the philosophical and political debates within a unique sanatorium setting, as portrayed in Thomas Mann's *The Magic Mountain*.",
   "question": "What genre is *The Magic Mountain* considered to be?",
   "alternatives": [
-    "A) Mystery",
-    "B) Bildungsroman",
-    "C) Romance",
-    "D) Science Fiction"
+    "Mystery",
+    "Bildungsroman",
+    "Romance",
+    "Science Fiction"
   ],
-  "answer": "B) Bildungsroman"
+  "answer": "Bildungsroman"
 },{
   "category": "Arts/Literature",
   "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is a detailed discussion about the themes, characters, and philosophical aspects of the book \"Crime and Punishment\" by Fyodor Dostoevsky.",
   "question": "What philosophical perspective does Sonya character embody in \"Crime and Punishment\"?",
   "alternatives": [
@@ -224,8 +224,8 @@
 },{
   "category": "Science/Natural Science",
   "specific": "Urban Geography/Asia/china.md",
-  "difficulty": "medium",
-  "context": ". \n\nThe context is the history and significance of China as a country, including its population, economy, political history, major wars, and significant events such as the overthrow of the monarchy and the Nanjing Massacre.",
+  "difficulty": "Medium",
+  "context": "The context is the history and significance of China as a country, including its population, economy, political history, major wars, and significant events such as the overthrow of the monarchy and the Nanjing Massacre.",
   "question": "What country has the world's largest GDP by power purchase?",
   "alternatives": [
     "United States",
@@ -237,7 +237,7 @@
 },{
   "category": "Arts/Performing arts",
   "specific": "Moving pictures/Cinema/Critics/2010s/Midnight in Paris/midnight_in_paris.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is a personal reflection on the movie \"Midnight in Paris\" by a viewer who initially didn't understand its appeal but grew to appreciate its magical portrayal of Paris and the characters within.",
   "question": "What stands out as the main central theme of the movie Midnight in Paris?",
   "alternatives": [
@@ -263,7 +263,7 @@
 },{
   "category": "Spare/Games",
   "specific": "Chess/Openings/openings.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is basic opening strategies for the King's pawn in chess, including controlling the center with pawns, developing knights and bishops, and examples of different openings such as the Italian Game and French Defense.",
   "question": "Which opening leads to the Giucco Piano classical setting?",
   "alternatives": [
@@ -289,7 +289,7 @@
 },{
   "category": "Humanities/Philosophy",
   "specific": "5 - Contemporary/Foucault/Madness And Civilization/main.md",
-  "difficulty": "hard",
+  "difficulty": "Hard",
   "context": "The context is, in the Modern era, the creation of medical institutions for confining mentally insane people under the supervision of medical doctors, born out of the dual cultural motives of curing the insane away from poor families and confining socially undesirable individuals to protect society.",
   "question": "In which era did medical institutions for confining mentally insane people under the supervision of medical doctors first become established?",
   "alternatives": [
@@ -302,7 +302,7 @@
 },{
   "category": "Arts/Visual arts",
   "specific": "Architecture/art deco/art_deco.md",
-  "difficulty": "hard",
+  "difficulty": "Hard",
   "context": "The context is the Art Deco style which represented luxury and glamour, especially during the Roaring Twenties and Jazz Age.",
   "question": "What was one of the primary characteristics of Art Deco in terms of colors and materials?",
   "alternatives": [
@@ -315,29 +315,29 @@
 },{
   "category": "Humanities/Philosophy",
   "specific": "4 - Modern/Hegel/Dialetic.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is the explanation of the three dialectic moments in Hegel's philosophy and how they progress from abstract to speculative to reach the Absolute.",
-  "question": "What distinguishes Hegel's dialectic from Plato's?\n",
+  "question": "What distinguishes Hegel's dialectic from Plato's?",
   "alternatives": [
-    "Metaphysical generelization\n",
-    "There is nothing new\n",
-    "Poggers\n",
-    "Fourth, later concepts both determine and also surpass the limits or finitude of earlier concepts.\n"
+    "Metaphysical generelization",
+    "There is nothing new",
+    "Poggers",
+    "I have no idea"
   ],
-  "answer": "Fourth, later concepts both determine and also surpass the limits or finitude of earlier concepts.\n"
+  "answer": "I have no idea"
 },{
   "category": "Arts/Performing arts",
   "specific": "Music/Analysis/Classic Folk/summary.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is a song referencing a woman named Mrs. Robinson and the complex emotions surrounding her character, including themes of love, prayer, secrecy, and loneliness.",
   "question": "What does Simon mean by \"Heaven holds a place for those who pray\"?",
   "alternatives": [
-    "A - God blesses those who believe in him",
-    "B - Heaven is reserved for those who repent sins",
-    "C - Praying is a requirement to enter heaven",
-    "D - He is being ironic"
+    "God blesses those who believe in him",
+    "Heaven is reserved for those who repent sins",
+    "Praying is a requirement to enter heaven",
+    "He is being ironic"
   ],
-  "answer": "D - He is being ironic"
+  "answer": "He is being ironic"
 },{
   "category": "Science/Natural Science",
   "specific": "Psychology/Social Psychology/syndromes.md",
@@ -484,7 +484,7 @@
 },{
   "category": "Arts/Literature",
   "specific": "Novels/United States of America/(1996) Infinite Jest/book 4.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is disturbing incidents of substance abuse resulting in tragic consequences and reflections on addiction and recovery.",
   "question": "Whose example demonstrates severe compulsion-issues around nicotine and sugar?",
   "alternatives": [
@@ -497,7 +497,7 @@
 },{
   "category": "Humanities/Philosophy",
   "specific": "5 - Contemporary/Sartre/Existentialism is a humanism/Sartre.md",
-  "difficulty": "medium",
+  "difficulty": "Medium",
   "context": "The context is an exploration of key concepts in Sartre's existentialism, focusing on the idea that existence precedes essence, the responsibility we have in creating our own values, and the ethical implications of freedom and bad faith.",
   "question": "What does Sartre mean by the concept of \"bad faith,\" as discussed in Existence Precedes Essence?",
   "alternatives": [
@@ -523,12 +523,12 @@
 },{
   "category": "Arts/Literature",
   "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
-  "difficulty": "hard",
+  "difficulty": "Hard",
   "context": "The context is a detailed analysis of Fyodor Dostoevsky's novel \"Crime and Punishment,\" focusing on philosophical, psychological, and moral themes within the book, accompanied by personal reflections and character insights.",
   "question": "Why did Raskolnikov ultimately decide to confess to the murders he committed?",
   "alternatives": [
     "Out of fear of getting caught",
-    "Because he felt a profound sense of guilt",
+    "Because he felt a profound moral obligation to do so",
     "To prove his theory about extraordinary people",
     "Due to an overwhelming desire for punishment"
   ],
