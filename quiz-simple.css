@@ -89,6 +89,7 @@ header p {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Question Counter and Stats */
 .question-counter {
     text-align: center;
     font-size: 1.1rem;
@@ -98,6 +99,65 @@ header p {
     background: #f8f9fa;
     border-radius: 25px;
     font-weight: 500;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 80px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.stat-item span:last-child {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.stats-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    text-align: center;
+}
+
+.final-stats {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.final-stats h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.final-stats p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 /* Question Text */

@@ -4,6 +4,8 @@ class SimpleQuizApp {
     currentQuestion = null;
     elements;
     hasAnswered = false;
+    questionsAttempted = 0;
+    correctCount = 0;
     constructor() {
         this.elements = this.initializeElements();
         this.loadQuestions();
@@ -32,7 +34,11 @@ class SimpleQuizApp {
             feedbackMessage: getElement('feedback-message'),
             nextButton: getButton('next-button'),
             questionCounter: getElement('question-counter'),
-            loadingElement: getElement('loading')
+            loadingElement: getElement('loading'),
+            statsContainer: getElement('stats-container'),
+            questionsAttempted: getElement('questions-attempted'),
+            correctAnswers: getElement('correct-answers'),
+            accuracy: getElement('accuracy')
         };
     }
     async loadQuestions() {
@@ -123,6 +129,12 @@ class SimpleQuizApp {
         this.hasAnswered = true;
         const correctLetter = this.extractCorrectAnswer(this.currentQuestion.answer);
         const isCorrect = selectedLetter === correctLetter;
+        // Update statistics
+        this.questionsAttempted++;
+        if (isCorrect) {
+            this.correctCount++;
+        }
+        this.updateStatistics();
         // Disable all options and highlight correct/incorrect
         const allOptions = this.elements.optionsContainer.querySelectorAll('.option-button');
         allOptions.forEach((option) => {
@@ -182,6 +194,15 @@ class SimpleQuizApp {
                 </div>
             `;
         }
+        // Show statistics summary
+        const accuracy = this.questionsAttempted > 0
+            ? Math.round((this.correctCount / this.questionsAttempted) * 100)
+            : 0;
+        this.elements.feedbackMessage.innerHTML += `
+            <div class="stats-summary">
+                <p><strong>📊 Your Progress:</strong> ${this.correctCount}/${this.questionsAttempted} correct (${accuracy}%)</p>
+            </div>
+        `;
         this.elements.feedbackContainer.style.display = 'block';
         this.elements.nextButton.style.display = 'block';
     }
@@ -192,15 +213,32 @@ class SimpleQuizApp {
         const index = letterToIndex[letter];
         return this.currentQuestion.alternatives[index] || '';
     }
+    updateStatistics() {
+        this.elements.questionsAttempted.textContent = this.questionsAttempted.toString();
+        this.elements.correctAnswers.textContent = this.correctCount.toString();
+        const accuracy = this.questionsAttempted > 0
+            ? Math.round((this.correctCount / this.questionsAttempted) * 100)
+            : 0;
+        this.elements.accuracy.textContent = `${accuracy}%`;
+    }
     goToNextQuestion() {
         this.currentQuestionIndex++;
         this.displayCurrentQuestion();
     }
     showQuizComplete() {
+        const finalAccuracy = this.questionsAttempted > 0
+            ? Math.round((this.correctCount / this.questionsAttempted) * 100)
+            : 0;
         this.elements.questionContainer.innerHTML = `
             <div class="quiz-complete">
                 <h2>🎊 Quiz Complete!</h2>
                 <p>You've answered all ${this.questions.length} questions.</p>
+                <div class="final-stats">
+                    <h3>📊 Final Results:</h3>
+                    <p><strong>Questions Attempted:</strong> ${this.questionsAttempted}</p>
+                    <p><strong>Correct Answers:</strong> ${this.correctCount}</p>
+                    <p><strong>Accuracy:</strong> ${finalAccuracy}%</p>
+                </div>
                 <button onclick="location.reload()" class="restart-button">Start Over</button>
             </div>
         `;

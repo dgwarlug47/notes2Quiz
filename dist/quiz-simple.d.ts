@@ -4,6 +4,8 @@ declare class SimpleQuizApp {
     private currentQuestion;
     private elements;
     private hasAnswered;
+    private questionsAttempted;
+    private correctCount;
     constructor();
     private initializeElements;
     private loadQuestions;
@@ -17,6 +19,7 @@ declare class SimpleQuizApp {
     private extractCorrectAnswer;
     private showFeedback;
     private getOptionText;
+    private updateStatistics;
     private goToNextQuestion;
     private showQuizComplete;
 }
