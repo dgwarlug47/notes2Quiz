@@ -146,24 +146,21 @@ class SimpleQuizApp {
         this.showFeedback(isCorrect, selectedLetter, correctLetter);
     }
     extractCorrectAnswer(answerText) {
-        // Handle the answer format: "b. Self-deception or denial of freedom and responsibility"
-        const letterMatch = answerText.match(/^([a-dA-D])[\.\)]/);
-        if (letterMatch) {
-            return letterMatch[1].toUpperCase();
-        }
-        // Fallback patterns
-        const patterns = [
-            /([A-D])\)/, // A), B), C), D)
-            /\b([A-D])\b/, // A, B, C, D
-            /answer:\s*([A-D])/i, // answer: A
-            /correct.*?([A-D])/i // correct A
-        ];
-        for (const pattern of patterns) {
-            const match = answerText.match(pattern);
-            if (match) {
-                return match[1].toUpperCase();
+        if (!this.currentQuestion)
+            return 'A';
+        const letters = ['A', 'B', 'C', 'D'];
+        // Compare the answer text with each alternative to find the matching index
+        for (let i = 0; i < this.currentQuestion.alternatives.length; i++) {
+            const alternative = this.currentQuestion.alternatives[i];
+            // Direct text comparison (case insensitive, trimmed)
+            if (alternative.toLowerCase().trim() === answerText.toLowerCase().trim()) {
+                return letters[i];
             }
         }
+        // Debug: throw error if no match found to identify issues
+        console.error('No matching alternative found for answer:', answerText);
+        console.error('Available alternatives:', this.currentQuestion.alternatives);
+        throw new Error(`Could not find matching alternative for answer: "${answerText}"`);
         return 'A'; // Default fallback
     }
     showFeedback(isCorrect, selectedLetter, correctLetter) {
