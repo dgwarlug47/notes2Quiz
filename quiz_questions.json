@@ -6,12 +6,12 @@
   "context": "This text discusses the fall of the Roman Republic, focusing on the actions and impact of Julius Caesar.",
   "question": "What was the reason behind Julius Caesar crossing the Rubicon River?",
   "alternatives": [
-    " A negotiation for political positions with the Senate ",
-    " To avoid being prosecuted upon his return to Rome ",
-    " For military advancement with his army ",
-    " An escape from his enemies "
+    "A negotiation for political positions with the Senate",
+    "To avoid being prosecuted upon his return to Rome",
+    "For military advancement with his army",
+    "An escape from his enemies"
   ],
-  "answer": " To avoid being prosecuted upon his return to Rome "
+  "answer": "To avoid being prosecuted upon his return to Rome"
 },
 {
   "category": "Arts/Performing arts",
@@ -473,14 +473,14 @@
   "specific": "Sports/Football/World cup/national_team_ethos.md",
   "difficulty": "hard",
   "context": "The context is a comparison of the ethos exhibited by different national football teams and how those characteristics reflect the core cultural identity or ideal of their respective countries.",
-  "question": " How is the ethos of the Brazilian national football team manifested in their playing style? ",
+  "question": "How is the ethos of the Brazilian national football team manifested in their playing style?",
   "alternatives": [
-    " High-flying attacking football with flair ",
-    " Defensive, conservative tactics ",
-    " Midfield domination and possession-based game ",
-    " Daring and joy "
+    "High-flying attacking football with flair",
+    "Defensive, conservative tactics",
+    "Midfield domination and possession-based game",
+    "Daring and joy"
   ],
-  "answer": " Daring and joy "
+  "answer": "Daring and joy"
 },{
   "category": "Arts/Literature",
   "specific": "Novels/United States of America/(1996) Infinite Jest/book 4.md",
@@ -501,12 +501,12 @@
   "context": "The context is an exploration of key concepts in Sartre's existentialism, focusing on the idea that existence precedes essence, the responsibility we have in creating our own values, and the ethical implications of freedom and bad faith.",
   "question": "What does Sartre mean by the concept of \"bad faith,\" as discussed in Existence Precedes Essence?",
   "alternatives": [
-    "a. Honesty and integrity",
-    "b. Self-deception or denial of freedom and responsibility",
-    "c. Good intentions",
-    "d. Optimism Provides the right Answer"
+    "Honesty and integrity",
+    "Self-deception or denial of freedom and responsibility",
+    "Good intentions",
+    "Optimism Provides the right Answer"
   ],
-  "answer": "b. Self-deception or denial of freedom and responsibility"
+  "answer": "Self-deception or denial of freedom and responsibility"
 },{
   "category": "Humanities/Philosophy",
   "specific": "4 - Modern/Hegel/History.md",
