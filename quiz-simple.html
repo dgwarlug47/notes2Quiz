@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz - One Question at a Time</title>
+    <link rel="stylesheet" href="quiz-simple.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Simple Quiz</h1>
+            <p>Answer one question at a time</p>
+        </header>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading questions...</p>
+        </div>
+
+        <main id="question-container" class="question-container" style="display: none;">
+            <div id="question-counter" class="question-counter"></div>
+            
+            <div id="question-text" class="question-text"></div>
+            
+            <div id="options-container" class="options-container"></div>
+            
+            <div id="feedback-container" class="feedback-container" style="display: none;">
+                <div id="feedback-message" class="feedback-message"></div>
+                <button id="next-button" class="next-button">Next Question →</button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="dist/quiz-simple.js"></script>
+</body>
+</html>

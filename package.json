@@ -1,14 +1,18 @@
 {
   "name": "notes2quiz",
   "version": "1.0.0",
-  "description": "A quiz application that generates questions from JSON data",
+  "type": "module",
+  "description": "TypeScript quiz application that displays questions one at a time",
   "main": "server.js",
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
     "start": "node server.js",
-    "dev": "node server.js"
+    "serve": "npm run build && npm start"
   },
   "keywords": [
     "quiz",
+    "typescript",
     "education",
     "json",
     "http-server"
@@ -17,5 +21,10 @@
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "@types/node": "^20.4.8"
+  },
+  "dependencies": {}
 }
