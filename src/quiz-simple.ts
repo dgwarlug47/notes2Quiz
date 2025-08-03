@@ -23,6 +23,13 @@ interface SimpleQuizElements {
     questionsAttempted: HTMLElement;
     correctAnswers: HTMLElement;
     accuracy: HTMLElement;
+    textInputContainer: HTMLElement;
+    answerInput: HTMLInputElement;
+    submitButton: HTMLButtonElement;
+    modeToggle: HTMLButtonElement;
+    selfAssessmentContainer: HTMLElement;
+    correctButton: HTMLButtonElement;
+    incorrectButton: HTMLButtonElement;
 }
 
 class SimpleQuizApp {
@@ -33,6 +40,7 @@ class SimpleQuizApp {
     private hasAnswered: boolean = false;
     private questionsAttempted: number = 0;
     private correctCount: number = 0;
+    private isTextMode: boolean = false;
 
     constructor() {
         this.elements = this.initializeElements();
@@ -57,6 +65,14 @@ class SimpleQuizApp {
             return element;
         };
 
+        const getInput = (id: string): HTMLInputElement => {
+            const element = document.getElementById(id) as HTMLInputElement;
+            if (!element) {
+                throw new Error(`Input with id "${id}" not found`);
+            }
+            return element;
+        };
+
         return {
             questionContainer: getElement('question-container'),
             questionText: getElement('question-text'),
@@ -69,7 +85,14 @@ class SimpleQuizApp {
             statsContainer: getElement('stats-container'),
             questionsAttempted: getElement('questions-attempted'),
             correctAnswers: getElement('correct-answers'),
-            accuracy: getElement('accuracy')
+            accuracy: getElement('accuracy'),
+            textInputContainer: getElement('text-input-container'),
+            answerInput: getInput('answer-input'),
+            submitButton: getButton('submit-button'),
+            modeToggle: getButton('mode-toggle'),
+            selfAssessmentContainer: getElement('self-assessment-container'),
+            correctButton: getButton('correct-button'),
+            incorrectButton: getButton('incorrect-button')
         };
     }
 
@@ -100,6 +123,28 @@ class SimpleQuizApp {
     private bindEvents(): void {
         this.elements.nextButton.addEventListener('click', () => {
             this.goToNextQuestion();
+        });
+
+        this.elements.modeToggle.addEventListener('click', () => {
+            this.toggleMode();
+        });
+
+        this.elements.submitButton.addEventListener('click', () => {
+            this.submitTextAnswer();
+        });
+
+        this.elements.answerInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !this.hasAnswered) {
+                this.submitTextAnswer();
+            }
+        });
+
+        this.elements.correctButton.addEventListener('click', () => {
+            this.handleSelfAssessment(true);
+        });
+
+        this.elements.incorrectButton.addEventListener('click', () => {
+            this.handleSelfAssessment(false);
         });
     }
 
@@ -136,13 +181,19 @@ class SimpleQuizApp {
             <div class="question-content">${this.currentQuestion.question}</div>
         `;
 
-        // Clear and create options
-        this.elements.optionsContainer.innerHTML = '';
-        this.createOptions();
+        // Show appropriate input method based on mode
+        if (this.isTextMode) {
+            this.showTextInput();
+        } else {
+            this.showMultipleChoice();
+        }
 
         // Hide feedback and next button
         this.elements.feedbackContainer.style.display = 'none';
         this.elements.nextButton.style.display = 'none';
+        
+        // Hide self-assessment container
+        this.elements.selfAssessmentContainer.style.display = 'none';
     }
 
     private createOptions(): void {
@@ -167,6 +218,124 @@ class SimpleQuizApp {
 
             this.elements.optionsContainer.appendChild(optionElement);
         });
+    }
+
+    private showMultipleChoice(): void {
+        this.elements.optionsContainer.style.display = 'flex';
+        this.elements.textInputContainer.style.display = 'none';
+        this.elements.optionsContainer.innerHTML = '';
+        this.createOptions();
+    }
+
+    private showTextInput(): void {
+        this.elements.optionsContainer.style.display = 'none';
+        this.elements.textInputContainer.style.display = 'block';
+        this.elements.answerInput.value = '';
+        this.elements.answerInput.disabled = false;
+        this.elements.submitButton.disabled = false;
+        this.elements.answerInput.focus();
+    }
+
+    private toggleMode(): void {
+        this.isTextMode = !this.isTextMode;
+        this.elements.modeToggle.textContent = this.isTextMode ? 
+            '🔲 Switch to Multiple Choice' : 
+            '✏️ Switch to Text Input';
+        
+        // Reset current question display
+        this.displayCurrentQuestion();
+    }
+
+    private submitTextAnswer(): void {
+        if (this.hasAnswered || !this.currentQuestion) return;
+
+        const userAnswer = this.elements.answerInput.value.trim();
+        if (!userAnswer) {
+            alert('Please enter an answer before submitting.');
+            return;
+        }
+
+        this.hasAnswered = true;
+        this.elements.answerInput.disabled = true;
+        this.elements.submitButton.disabled = true;
+
+        // Find the correct answer
+        const correctLetter = this.extractCorrectAnswer(this.currentQuestion.answer);
+        const correctOptionText = this.getOptionText(correctLetter);
+        
+        // Show self-assessment instead of automatic checking
+        this.showSelfAssessment(userAnswer, correctLetter, correctOptionText);
+    }
+
+    private checkTextAnswer(userAnswer: string, correctAnswer: string): boolean {
+        const normalizeText = (text: string) => {
+            return text.toLowerCase()
+                      .trim()
+                      .replace(/[^\w\s]/g, '') // Remove punctuation
+                      .replace(/\s+/g, ' '); // Normalize spaces
+        };
+
+        const normalizedUser = normalizeText(userAnswer);
+        const normalizedCorrect = normalizeText(correctAnswer);
+
+        // Check exact match
+        if (normalizedUser === normalizedCorrect) {
+            return true;
+        }
+
+        // Check if user answer contains the correct answer or vice versa
+        if (normalizedUser.includes(normalizedCorrect) || 
+            normalizedCorrect.includes(normalizedUser)) {
+            return true;
+        }
+
+        // Check against all alternatives for partial matches
+        if (this.currentQuestion) {
+            for (const alternative of this.currentQuestion.alternatives) {
+                const normalizedAlt = normalizeText(alternative);
+                if (normalizedUser === normalizedAlt || 
+                    normalizedUser.includes(normalizedAlt) ||
+                    normalizedAlt.includes(normalizedUser)) {
+                    return normalizedAlt === normalizedCorrect;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private showTextFeedback(isCorrect: boolean, userAnswer: string, correctLetter: AnswerLetter, correctAnswer: string): void {
+        if (isCorrect) {
+            this.elements.feedbackMessage.innerHTML = `
+                <div class="feedback-correct">
+                    <h3>🎉 Correct!</h3>
+                    <p>Well done! Your answer "<strong>${userAnswer}</strong>" is correct!</p>
+                    <p>The correct answer is: <strong>${correctLetter}) ${correctAnswer}</strong></p>
+                </div>
+            `;
+        } else {
+            this.elements.feedbackMessage.innerHTML = `
+                <div class="feedback-incorrect">
+                    <h3>❌ Incorrect</h3>
+                    <p>Your answer: "<strong>${userAnswer}</strong>"</p>
+                    <p>The correct answer is: <strong>${correctLetter}) ${correctAnswer}</strong></p>
+                </div>
+            `;
+        }
+
+        // Show statistics summary
+        const accuracy = this.questionsAttempted > 0 
+            ? Math.round((this.correctCount / this.questionsAttempted) * 100)
+            : 0;
+        
+        this.elements.feedbackMessage.innerHTML += `
+            <div class="stats-summary">
+                <p><strong>📊 Your Progress:</strong> ${this.correctCount}/${this.questionsAttempted} correct (${accuracy}%)</p>
+            </div>
+        `;
+
+        this.elements.feedbackContainer.style.display = 'block';
+        this.elements.nextButton.style.display = 'block';
     }
 
     private selectOption(selectedLetter: AnswerLetter, selectedElement: HTMLButtonElement): void {
@@ -283,6 +452,44 @@ class SimpleQuizApp {
             ? Math.round((this.correctCount / this.questionsAttempted) * 100)
             : 0;
         this.elements.accuracy.textContent = `${accuracy}%`;
+    }
+
+    private showSelfAssessment(userAnswer: string, correctLetter: AnswerLetter, correctAnswer: string): void {
+        // Update the answer comparison section
+        const comparisonElement = document.getElementById('answer-comparison');
+        if (comparisonElement) {
+            comparisonElement.innerHTML = `
+                <h4>Your Answer:</h4>
+                <p class="user-answer">"${userAnswer}"</p>
+                <h4>Correct Answer:</h4>
+                <p class="correct-answer">${correctLetter}) ${correctAnswer}</p>
+            `;
+        }
+
+        // Show self-assessment container
+        this.elements.selfAssessmentContainer.style.display = 'block';
+        
+        // Hide text input container
+        this.elements.textInputContainer.style.display = 'none';
+    }
+
+    private handleSelfAssessment(isCorrect: boolean): void {
+        // Update statistics based on user's self-assessment
+        this.questionsAttempted++;
+        if (isCorrect) {
+            this.correctCount++;
+        }
+        this.updateStatistics();
+
+        // Hide self-assessment container
+        this.elements.selfAssessmentContainer.style.display = 'none';
+
+        // Show feedback
+        const userAnswer = this.elements.answerInput.value.trim();
+        const correctLetter = this.extractCorrectAnswer(this.currentQuestion!.answer);
+        const correctAnswer = this.getOptionText(correctLetter);
+        
+        this.showTextFeedback(isCorrect, userAnswer, correctLetter, correctAnswer);
     }
 
     private goToNextQuestion(): void {

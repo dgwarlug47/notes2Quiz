@@ -12,20 +12,24 @@ export interface QuizStats {
 }
 export type DifficultyLevel = 'easy' | 'medium' | 'hard';
 export type AnswerLetter = 'A' | 'B' | 'C' | 'D';
-export interface QuizElements {
-    loading: HTMLElement;
-    quizContent: HTMLElement;
-    errorMessage: HTMLElement;
-    questionNumber: HTMLElement;
+export interface SimpleQuizElements {
+    questionContainer: HTMLElement;
     questionText: HTMLElement;
-    answerOptions: HTMLElement;
-    resultSection: HTMLElement;
-    resultMessage: HTMLElement;
-    correctAnswer: HTMLElement;
-    fullResponse: HTMLElement;
-    newQuestionBtn: HTMLButtonElement;
-    nextQuestionBtn: HTMLButtonElement;
-    questionsAnswered: HTMLElement;
-    correctCount: HTMLElement;
+    optionsContainer: HTMLElement;
+    feedbackContainer: HTMLElement;
+    feedbackMessage: HTMLElement;
+    nextButton: HTMLButtonElement;
+    questionCounter: HTMLElement;
+    loadingElement: HTMLElement;
+    statsContainer: HTMLElement;
+    questionsAttempted: HTMLElement;
+    correctAnswers: HTMLElement;
     accuracy: HTMLElement;
+    textInputContainer: HTMLElement;
+    answerInput: HTMLInputElement;
+    submitButton: HTMLButtonElement;
+    modeToggle: HTMLButtonElement;
+    selfAssessmentContainer: HTMLElement;
+    correctButton: HTMLButtonElement;
+    incorrectButton: HTMLButtonElement;
 }

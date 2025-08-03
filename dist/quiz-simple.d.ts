@@ -6,6 +6,7 @@ declare class SimpleQuizApp {
     private hasAnswered;
     private questionsAttempted;
     private correctCount;
+    private isTextMode;
     constructor();
     private initializeElements;
     private loadQuestions;
@@ -15,11 +16,19 @@ declare class SimpleQuizApp {
     private showError;
     private displayCurrentQuestion;
     private createOptions;
+    private showMultipleChoice;
+    private showTextInput;
+    private toggleMode;
+    private submitTextAnswer;
+    private checkTextAnswer;
+    private showTextFeedback;
     private selectOption;
     private extractCorrectAnswer;
     private showFeedback;
     private getOptionText;
     private updateStatistics;
+    private showSelfAssessment;
+    private handleSelfAssessment;
     private goToNextQuestion;
     private showQuizComplete;
 }
