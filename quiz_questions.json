@@ -1,72 +1,538 @@
 [
-  {
-    "questionNumber": 1,
-    "timestamp": "2025-07-28T01:28:32.557Z",
-    "context": "Context: The text discusses the Hiberian invasion that occurred in Spain.",
-    "question": "Question: Which two territories of Spain experienced the most significant impact due to the Hiberian invasion?\n\nA) Galicia and Catalonia\nB) Andalusia and Valencia\nC) Asturias and Castile\nD) Basque Country and Murcia",
-    "response": "Correct quiz answer: B) Andalusia and Valencia"
-  },
-  {
-    "questionNumber": 2,
-    "timestamp": "2025-07-28T01:28:34.605Z",
-    "context": "Context: The text discusses the American Revolution, a pivotal historical event that led to the American colonies gaining independence from Britain.",
-    "question": "Question: Which document served as the formal statement of independence by the American colonies during the American Revolution?\n\nA) The Bill of Rights\nB) The Magna Carta\nC) The Mayflower Compact\nD) The Declaration of Independence",
-    "response": "Answer: D) The Declaration of Independence"
-  },
-  {
-    "questionNumber": 3,
-    "timestamp": "2025-07-28T01:28:36.514Z",
-    "context": "Context: The text deals with resources for studying Differential Geometry within the field of Mathematics.",
-    "question": "Question: What is a common software used for visualizing concepts in Differential Geometry?\n\nA) Microsoft Word\nB) PowerPoint\nC) Geogebra\nD) Excel",
-    "response": "Correct quiz answer: C) Geogebra"
-  },
-  {
-    "questionNumber": 4,
-    "timestamp": "2025-07-28T01:28:38.565Z",
-    "context": "Summary: The text discusses themes from Jean-Paul Sartre's existentialist philosophy, particularly focusing on his work \"Being and Nothingness\".",
-    "question": "Question: How does Jean-Paul Sartre define \"bad faith\" in his book \"Being and Nothingness\"?\n\nA) Bad faith is the refusal to acknowledge one's responsibilities and choices\nB) Bad faith is the state of being true to oneself and accepting existential freedom\nC) Bad faith is actively seeking authenticity and self-realization\nD) Bad faith is the rejection of any responsibility for one's actions",
-    "response": "Correct quiz answer: A) Bad faith is the refusal to acknowledge one's responsibilities and choices"
-  },
-  {
-    "questionNumber": 5,
-    "timestamp": "2025-07-28T01:28:40.917Z",
-    "context": "Context: Exploring the urban geography of the Greater Seattle area in the USA.",
-    "question": "Question: What is a major geographic feature that influences the layout of the Greater Seattle area?\n\nA) Elevation of the Cascade Mountain range\nB) Proximity to the Pacific Ocean\nC) Distance from the Canadian border\nD) Latitude of the region",
-    "response": "Correct quiz answer: B) Proximity to the Pacific Ocean"
-  },
-  {
-    "questionNumber": 6,
-    "timestamp": "2025-07-28T01:28:42.878Z",
-    "context": "Summary: The text is likely about the Waterloo metro area in Canada and specifically about its geography and urban development.",
-    "question": "Question: How has the population in the Waterloo metro area changed in the past decade?\n\nA) The population has slowly declined due to lack of job opportunities.\nB) The population has dramatically increased due to a booming tech industry.\nC) The population has remained stagnant due to strict zoning laws.\nD) The population has fluctuated due to seasonal migration patterns.",
-    "response": "Correct quiz answer: B) The population has dramatically increased due to a booming tech industry."
-  },
-  {
-    "questionNumber": 7,
-    "timestamp": "2025-07-28T01:28:45.010Z",
-    "context": "Summary: The text discusses the impact of Franz Kafka's novel \"Metamorphosis\" in Europe in the year 1915.",
-    "question": "Question: In which year was Franz Kafka's novel \"Metamorphosis\" published?\n\nA) 1900\nB) 1915\nC) 1925\nD) 1940",
-    "response": "Correct quiz answer: B) 1915"
-  },
-  {
-    "questionNumber": 8,
-    "timestamp": "2025-07-28T01:28:47.736Z",
-    "context": "Context: The text discusses Heidegger's concept of \"being\" and his book \"Being and Time.\"",
-    "question": "Question: According to Heidegger, what is the ultimate aim of Dasein's existence?\n\nA) To seek pleasure and avoid pain\nB) To pursue material wealth and success\nC) To attain self-actualization and realization of authenticity\nD) To conform to societal norms and expectations",
-    "response": "Correct quiz answer: C) To attain self-actualization and realization of authenticity"
-  },
-  {
-    "questionNumber": 9,
-    "timestamp": "2025-07-28T01:28:49.616Z",
-    "context": "In the book of John in the Bible, Jesus performs various miracles and teaches important lessons to his disciples. One of the most well-known miracles in this book is the turning of water into wine at a wedding in Cana.\n\n**",
-    "question": "Question:** What was the setting where Jesus performed the miracle of turning water into wine in the book of John?\n\nA) A fishing boat on the Sea of Galilee  \nB) A marketplace in Jerusalem  \nC) A wedding in Cana  \nD) A temple in Capernaum",
-    "response": "**Correct Answer:** C) A wedding in Cana"
-  },
-  {
-    "questionNumber": 10,
-    "timestamp": "2025-07-28T01:28:51.788Z",
-    "context": "Summary: The text discusses the political and social climate in the former USSR during the 20th century.",
-    "question": "Question: How did the political system in the USSR impact social movements during the 20th century?\n\nA) The political system in the USSR encouraged a diversity of social movements to flourish\nB) The political system in the USSR actively suppressed and controlled all social movements\nC) The political system in the USSR had no influence on social movements\nD) The political system in the USSR worked hand in hand with social movements to promote change",
-    "response": "Correct quiz answer: B) The political system in the USSR actively suppressed and controlled all social movements"
-  }
+{
+  "category": "Science/Social Sciences",
+  "specific": "History/Rome/Republic/Fall of Republic/fall_of_republic.md",
+  "difficulty": "Hard",
+  "context": "This text discusses the fall of the Roman Republic, focusing on the actions and impact of Julius Caesar.",
+  "question": "What was the reason behind Julius Caesar crossing the Rubicon River?",
+  "alternatives": [
+    " A negotiation for political positions with the Senate ",
+    " To avoid being prosecuted upon his return to Rome ",
+    " For military advancement with his army ",
+    " An escape from his enemies "
+  ],
+  "answer": " To avoid being prosecuted upon his return to Rome "
+},
+{
+  "category": "Arts/Performing arts",
+  "specific": "Moving pictures/Cinema/Other/rom_coms.md",
+  "difficulty": "medium",
+  "context": "The text presents summaries of various movies, such as \"500 Days of Summer,\" \"Yes Man\", \"It's Kind of a Funny Story\", through the lens of Aristotle's philosophical concepts and virtues.",
+  "question": "What term best describes the movie \"50 First Dates\" from an Aristotelian point of view?",
+  "alternatives": [
+    "Eros (passionate love)",
+    "Arete (virtue/excellence)",
+    "Philia (friendship)",
+    "Agape (unconditional love)"
+  ],
+  "answer": "Agape (unconditional love)"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Urban Geography/Asia/china.md",
+  "difficulty": "Hard",
+  "context": "This text provides a brief overview of China's history, economy, political system, and significant events such as the Opium Wars, Qing dynasty, 1911 Revolution, and Mao's famine during the Great Leap Forward.",
+  "question": "What is the biggest GDP province in China?",
+  "alternatives": [
+    "Shanghai",
+    "Beijing",
+    "Chongquing",
+    "Guangdong"
+  ],
+  "answer": "Guangdong"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
+  "difficulty": "hard",
+  "context": "This text describes Dante's journey through the various levels of Heaven in his work \"The Divine Comedy.\"",
+  "question": "What is the main theme of Dante's encounter with the souls in the sphere of Mars in the Divine Comedy?",
+  "alternatives": [
+    "Devotion to religious principles",
+    "Sacrifice for Christianity",
+    "Love conquering all",
+    "Wisdom through contemplation"
+  ],
+  "answer": "Wisdom through contemplation"
+},{
+  "category": "Arts/Performing arts",
+  "specific": "Music/Analysis/Classic Folk/summary.md",
+  "difficulty": "Hard",
+  "context": "The context of this text is a song called \"Mrs. Robinson\" by Simon & Garfunkel, with lyrics discussing various themes such as hidden secrets, loneliness, and societal expectations.",
+  "question": "What sports legend is mentioned in the song \"Mrs. Robinson\"?",
+  "alternatives": [
+    "A) Babe Ruth",
+    "B) Michael Jordan",
+    "C) Joe DiMaggio",
+    "D) Wayne Gretzky"
+  ],
+  "answer": "C) Joe DiMaggio"
+},{
+  "category": "Science/Social Sciences",
+  "specific": "Politics/G7/USA/republicans_and_democrats.md",
+  "difficulty": "medium",
+  "context": "This text explains how the Republican Party transitioned from the era of Abraham Lincoln to the current time of Donald Trump, highlighting key turning points in the party's history.",
+  "question": "What was the Turning Point in the transformation of the Republican Party from Abraham Lincoln to Donald Trump?",
+  "alternatives": [
+    "Strengthened business relations",
+    "Conservative economy and social beliefs",
+    "Opposition to the Voting Rights Act of 1965",
+    "Adoption of progressive reforms"
+  ],
+  "answer": "Opposition to the Voting Rights Act of 1965"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Urban Geography/USA/Manhattan/Upper East side/ues.md",
+  "difficulty": "medium",
+  "context": "The text provides a detailed overview of the Upper East Side in New York City, covering aspects like history, personalities, landmarks, films, and books related to the area.",
+  "question": "What was the reason that allowed those of old money to move to the Upper East Side as well as new families in 1895?",
+  "alternatives": [
+    "Monetary success of Caroline Astor",
+    "Integration of old and new upper class represented through Caroline Astor moving to the area",
+    "Developement of a luxurious mansion",
+    "Opening of public parks"
+  ],
+  "answer": "Integration of old and new upper class represented through Caroline Astor moving to the area"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
+  "difficulty": "hard",
+  "context": "The context is a detailed look at the themes discussed in the book 'Infinite Jest,' including addiction, loneliness, American culture, and the complexities of the Korean Mafia.",
+  "question": "What is the key point in the Marathe's critique of hedonism in Infinite Jest?",
+  "alternatives": [
+    "Hedonism should not dictate our personal temple; surrender to desire signals disastrous consequences.",
+    "Hedonism leads to ultimate joy and fulfillment, benefiting individual sentiment.",
+    "Hedonism leads to a solitary existence, free of distractions.",
+    "Hedonism promotes self-joy with no negative consequences."
+  ],
+  "answer": "Hedonism promotes self-joy with no negative consequences."
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
+  "difficulty": "medium",
+  "context": "The context is the intricate examination of literary themes and philosophical concepts within the story \"Infinite Jest,\" weaving together elements of addiction, tennis as a metaphor for modern life, American culture critique, and deep insights into the human condition.",
+  "question": "What did Clipperton's devastating action highlight about success?",
+  "alternatives": [
+    "His immense psychological burden from the competitive nature of Capitalism",
+    "The clinging desire for Success leads to catastrophic consequences",
+    "The deep despair of falling short of one's potential",
+    "The isolated vulnerability caused by competition"
+  ],
+  "answer": "The isolated vulnerability caused by competition"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Biology/Taxonomy/main.md",
+  "difficulty": "medium",
+  "context": "The context is a brief overview of the six kingdoms of life based on their cellular structure, nutrition, and reproduction methods.",
+  "question": "In which kingdom do organisms perform photosynthesis using chlorophyll?",
+  "alternatives": [
+    "Animalia",
+    "Plantae",
+    "Fungi",
+    "Protista"
+  ],
+  "answer": "Protista"
+},{
+  "category": "Science/Social Sciences",
+  "specific": "History/Rome/basics.md",
+  "difficulty": "Medium",
+  "context": "The context is the gradual weakening of the Roman military due to the end of expansion, loss of slaves and war treasures, and internal struggles between the East and West Roman Empire.",
+  "question": "What was one of the major factors contributing to the weakening of the Roman military as the empire progressed towards its fall?",
+  "alternatives": [
+    "Loss of North Africa",
+    "Division of Empire between East and West",
+    "Lack of slaves",
+    "Struggle between East and West Roman empire"
+  ],
+  "answer": "Struggle between East and West Roman empire"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
+  "difficulty": "Medium",
+  "context": "The context is Dante's progression through the levels of heaven, meeting souls who embody different virtues and values.",
+  "question": "Who explains the providential role of the Roman Empire in God's plan?",
+  "alternatives": [
+    "Emperor Justinian",
+    "Augustus",
+    "Marcus Aurelius",
+    "Constantine"
+  ],
+  "answer": "Constantine"
+},{
+  "category": "Science/Social Sciences",
+  "specific": "History/Rome/Republic/Middle Republic/middle_republic.md",
+  "difficulty": "medium",
+  "context": "The context is the Guerra Cimbria, specifically the Battle of Aquae Sextiae where Gaius Marius implemented military reforms to defeat the Germanic tribes.",
+  "question": "Who led the Roman armies in the Battle of Aqua Sextia against the Germanic tribes?",
+  "alternatives": [
+    "Gaius Marius",
+    "Mario Corleone",
+    "Julius Caesar",
+    "Pompey the Great"
+  ],
+  "answer": "Gaius Marius"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Biology/Taxonomy/Botany/angiosperm.md",
+  "difficulty": "medium",
+  "context": "The context is an overview of the classes and orders of the phylum Magnoliophyta (flowering plants), specifically focusing on the two main classes, Magnoliopsida (Dicotyledons or Dicots) and Liliopsida (Monocotyledons or Monocots).",
+  "question": "What is the defining characteristic of a flower in angiosperms?",
+  "alternatives": [
+    "Facilitates sexual reproduction",
+    "Absorbs nutrients",
+    "Absorbs water",
+    "Supports the plant"
+  ],
+  "answer": "Facilitates sexual reproduction"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/Germany/(1924) The Magic Mountain/summary.md",
+  "difficulty": "medium",
+  "context": "The context is a deep dive into the philosophical and political debates within a unique sanatorium setting, as portrayed in Thomas Mann's *The Magic Mountain*.",
+  "question": "What genre is *The Magic Mountain* considered to be?",
+  "alternatives": [
+    "A) Mystery",
+    "B) Bildungsroman",
+    "C) Romance",
+    "D) Science Fiction"
+  ],
+  "answer": "B) Bildungsroman"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
+  "difficulty": "medium",
+  "context": "The context is a detailed discussion about the themes, characters, and philosophical aspects of the book \"Crime and Punishment\" by Fyodor Dostoevsky.",
+  "question": "What philosophical perspective does Sonya character embody in \"Crime and Punishment\"?",
+  "alternatives": [
+    "Christianity",
+    "Hedonism",
+    "Übermensch",
+    "Utilitarianism"
+  ],
+  "answer": "Christianity"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "1- Classical/Greek Ethics.md",
+  "difficulty": "Hard",
+  "context": "The context is stoicism, a philosophical concept by Zeno of Citium characterized by a belief in living in harmony with nature and an emphasis on self-control and acceptance of fate.",
+  "question": "What is the goal of life according to Zeno of Citium?",
+  "alternatives": [
+    "Living without desires",
+    "Striving for material wealth",
+    "Internal discontentment",
+    "Living in agreement with nature"
+  ],
+  "answer": "Living in agreement with nature"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Urban Geography/Asia/china.md",
+  "difficulty": "medium",
+  "context": ". \n\nThe context is the history and significance of China as a country, including its population, economy, political history, major wars, and significant events such as the overthrow of the monarchy and the Nanjing Massacre.",
+  "question": "What country has the world's largest GDP by power purchase?",
+  "alternatives": [
+    "United States",
+    "China",
+    "Japan",
+    "India"
+  ],
+  "answer": "China"
+},{
+  "category": "Arts/Performing arts",
+  "specific": "Moving pictures/Cinema/Critics/2010s/Midnight in Paris/midnight_in_paris.md",
+  "difficulty": "medium",
+  "context": "The context is a personal reflection on the movie \"Midnight in Paris\" by a viewer who initially didn't understand its appeal but grew to appreciate its magical portrayal of Paris and the characters within.",
+  "question": "What stands out as the main central theme of the movie Midnight in Paris?",
+  "alternatives": [
+    "Exploration of class struggles and wealth among the characters",
+    "Immersion into the fascinating culture and history of Paris",
+    "Focus on powerful emotions and complex relationships",
+    "Reflection on modern technological advances and its impact on society "
+  ],
+  "answer": "Immersion into the fascinating culture and history of Paris"
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/United States of America/(1965) Dune/characters.md",
+  "difficulty": "Hard",
+  "context": "The context is character descriptions from the novel Dune, including the protagonist Paul Atreides, his mother Jessica, and other important characters like Thufir Hawat, Gurney Halleck, and Naib Stilgar.",
+  "question": "Who is the father of Paul Atreides, the protagonist of Dune?",
+  "alternatives": [
+    "Duke Leto Atreides",
+    "Baron Harkonnen",
+    "Dr. Wellington Yueh",
+    "Muad’Dib"
+  ],
+  "answer": "Duke Leto Atreides"
+},{
+  "category": "Spare/Games",
+  "specific": "Chess/Openings/openings.md",
+  "difficulty": "medium",
+  "context": "The context is basic opening strategies for the King's pawn in chess, including controlling the center with pawns, developing knights and bishops, and examples of different openings such as the Italian Game and French Defense.",
+  "question": "Which opening leads to the Giucco Piano classical setting?",
+  "alternatives": [
+    "Ruy Lopez",
+    "Italian Game",
+    "French Defense",
+    "Scilian Defense"
+  ],
+  "answer": "Italian Game"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "4 - Modern/Kant/Critique of Pure Reason/main.md",
+  "difficulty": "Hard",
+  "context": "The context is a discussion of Kant's revolution in the understanding of synthetic judgments.",
+  "question": "According to Kant, what type of judgment is \"7 + 5 = 12\"?",
+  "alternatives": [
+    "Analytic a priori",
+    "Analytic a posteriori",
+    "Synthetic a posteriori",
+    "Synthetic a priori"
+  ],
+  "answer": "Synthetic a priori"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "5 - Contemporary/Foucault/Madness And Civilization/main.md",
+  "difficulty": "hard",
+  "context": "The context is, in the Modern era, the creation of medical institutions for confining mentally insane people under the supervision of medical doctors, born out of the dual cultural motives of curing the insane away from poor families and confining socially undesirable individuals to protect society.",
+  "question": "In which era did medical institutions for confining mentally insane people under the supervision of medical doctors first become established?",
+  "alternatives": [
+    "Middle Ages",
+    "Renaissance",
+    "Contemporary era",
+    "Modern era"
+  ],
+  "answer": "Modern era"
+},{
+  "category": "Arts/Visual arts",
+  "specific": "Architecture/art deco/art_deco.md",
+  "difficulty": "hard",
+  "context": "The context is the Art Deco style which represented luxury and glamour, especially during the Roaring Twenties and Jazz Age.",
+  "question": "What was one of the primary characteristics of Art Deco in terms of colors and materials?",
+  "alternatives": [
+    "None of the below",
+    "Black and white combinations only",
+    "Earth-tone colors and common materials like concrete",
+    "Bold and vibrant colors like jewel tones and luxurious exotic materials"
+  ],
+  "answer": "Bold and vibrant colors like jewel tones and luxurious exotic materials"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "4 - Modern/Hegel/Dialetic.md",
+  "difficulty": "medium",
+  "context": "The context is the explanation of the three dialectic moments in Hegel's philosophy and how they progress from abstract to speculative to reach the Absolute.",
+  "question": "What distinguishes Hegel's dialectic from Plato's?\n",
+  "alternatives": [
+    "Metaphysical generelization\n",
+    "There is nothing new\n",
+    "Poggers\n",
+    "Fourth, later concepts both determine and also surpass the limits or finitude of earlier concepts.\n"
+  ],
+  "answer": "Fourth, later concepts both determine and also surpass the limits or finitude of earlier concepts.\n"
+},{
+  "category": "Arts/Performing arts",
+  "specific": "Music/Analysis/Classic Folk/summary.md",
+  "difficulty": "medium",
+  "context": "The context is a song referencing a woman named Mrs. Robinson and the complex emotions surrounding her character, including themes of love, prayer, secrecy, and loneliness.",
+  "question": "What does Simon mean by \"Heaven holds a place for those who pray\"?",
+  "alternatives": [
+    "A - God blesses those who believe in him",
+    "B - Heaven is reserved for those who repent sins",
+    "C - Praying is a requirement to enter heaven",
+    "D - He is being ironic"
+  ],
+  "answer": "D - He is being ironic"
+},{
+  "category": "Science/Natural Science",
+  "specific": "Psychology/Social Psychology/syndromes.md",
+  "difficulty": "Hard",
+  "context": "The context is the discussion on common syndromes in psychology.",
+  "question": "What is one consequence of affluenza syndrome",
+  "alternatives": [
+    "A. Pursuing self-actualization over money",
+    "B. Dedication to pursuing meaningless sex",
+    "C. Focusing on virtuosity",
+    "D. Having no goals in life"
+  ],
+  "answer": "D. Having no goals in life"
+},{
+  "category": "Arts/Performing arts",
+  "specific": "Moving pictures/Cinema/Critics/2000s/City of God/cidade_de_deus.md",
+  "difficulty": "medium",
+  "context": "The context is a reflection on the film \"Cidade de Deus\", discussing themes of violence, power, and consequences in the setting of a Brazilian favela.",
+  "question": "Quem é o melhor personagem do filme \"Cidade de Deus\"?",
+  "alternatives": [
+    "Little Z",
+    "Buscape",
+    "Seu Jorge",
+    "Dadinho"
+  ],
+  "answer": "Buscape"
+},{
+  "category": "Arts/Performing arts",
+  "specific": "Moving pictures/Cinema/Critics/2010s/Manchester by the sea/manchester_by_the_sea.md",
+  "difficulty": "medium",
+  "context": "The context is a deep exploration of loss, grief, and guilt in the film 'Manchester by the Sea,' focusing on the protagonist Lee's emotional struggle and pain.",
+  "question": "Who plays the main character Lee in the film \"Manchester by the Sea\"?",
+  "alternatives": [
+    "Casey Affleck",
+    "Ben Affleck",
+    "Matt Damon",
+    "Tom Hardy"
+  ],
+  "answer": "Casey Affleck"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "Political Philosophy/Marx.md",
+  "difficulty": "medium",
+  "context": "The context is that individuals are alienated from their work, the products of their labor, themselves, and each other in capitalist society.",
+  "question": "How does Marx and Ludwig Feuerbach view religion?",
+  "alternatives": [
+    "God is created as the image of people",
+    "Forfeit their human powers",
+    "Believes in traditional Christian theology",
+    "Religion is opium of the people"
+  ],
+  "answer": "Religion is opium of the people"
+},{
+  "category": "Spare/Games",
+  "specific": "Sports/Football/World cup/summary.md",
+  "difficulty": "hard",
+  "context": "The context is discussing the history of the FIFA World Cup from 1958 to the present, highlighting key moments and matches from each tournament.",
+  "question": "Which country played against Uruguay in the quarter-finals of the 2010 FIFA World Cup among the four teams mentioned?",
+  "alternatives": [
+    "Uruguay",
+    "Brazil",
+    "Ghana",
+    "Germany"
+  ],
+  "answer": "Ghana"
+},{
+  "category": "Arts/Visual arts",
+  "specific": "Painting/Surrealism/surrealism.md",
+  "difficulty": "medium",
+  "context": "The context is a discussion of Surrealism and appreciation for the works of Magritte.",
+  "question": "Which painting by René Magritte features a man with an apple hiding his face?",
+  "alternatives": [
+    "The Lovers",
+    "Life is not a dream",
+    "The Son of a man",
+    "The Princes of charm"
+  ],
+  "answer": "The Son of a man"
+},{
+  "category": "Science/Social Sciences",
+  "specific": "History/Wolrd War I/basics.md",
+  "difficulty": "medium",
+  "context": "The context is the causes of World War I, specifically Germany's motivations for imperial expansion and the alliances that were formed during the war.",
+  "question": "What was the primary motivation behind Wilson's decision to lead the United States into World War I?",
+  "alternatives": [
+    "United states was making a lot of money by selling goods to Britain",
+    "Germany's resumption of submarine attacks on passenger and merchant ships",
+    "Zimmerman Telegram",
+    "Germany's resumption of submarine attacks on passenger and merchant ships"
+  ],
+  "answer": "Germany's resumption of submarine attacks on passenger and merchant ships"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "5 - Contemporary/Foucault/Discipline and punish/Discipline and punish.md",
+  "difficulty": "medium",
+  "context": "The context is an analysis of changes in forms of discipline and punishment in Western penal systems based on historical documents from France.",
+  "question": "According to Foucault's analysis in \"Discipline and Punish,\" what is the main idea behind the philosophy in society/government at the modern era?",
+  "alternatives": [
+    "Efficiency regulating the relationship between knowledge and power",
+    "Humanitarian concerns driving reform efforts",
+    "Normalizing power structures to replace repressive power",
+    "Elimination of individual freedom in favor of collective order"
+  ],
+  "answer": "Normalizing power structures to replace repressive power"
+},{
+  "category": "Science/Social Sciences",
+  "specific": "History/Rome/culture.md",
+  "difficulty": "medium",
+  "context": "The context is family, where adultery and the expectations of marriage were heavily influenced by societal norms and gender roles at the time.",
+  "question": "What was the definition of adultery in ancient societies?",
+  "alternatives": [
+    "Any sexual relationship outside of marriage",
+    "A man having sex with a woman who wasn't his wife",
+    "Adultery was only considered when cheating with unmarried individuals",
+    "A man having sex with a married woman who was not his wife."
+  ],
+  "answer": "A man having sex with a married woman who was not his wife."
+},{
+  "category": "Arts/Visual arts",
+  "specific": "Painting/Surrealism/surrealism.md",
+  "difficulty": "hard",
+  "context": "The context is a brief overview of surrealism highlighting the works of Magritte.",
+  "question": "Who is the painter known for the image \"The Lovers\"?",
+  "alternatives": [
+    "Max Ernst",
+    "Paul Delvaux",
+    "Rene Magritte",
+    "Salvador Dali"
+  ],
+  "answer": "Rene Magritte"
+},{
+  "category": "Spare/Games",
+  "specific": "Sports/Football/World cup/national_team_ethos.md",
+  "difficulty": "hard",
+  "context": "The context is a comparison of the ethos exhibited by different national football teams and how those characteristics reflect the core cultural identity or ideal of their respective countries.",
+  "question": " How is the ethos of the Brazilian national football team manifested in their playing style? ",
+  "alternatives": [
+    " High-flying attacking football with flair ",
+    " Defensive, conservative tactics ",
+    " Midfield domination and possession-based game ",
+    " Daring and joy "
+  ],
+  "answer": " Daring and joy "
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/United States of America/(1996) Infinite Jest/book 4.md",
+  "difficulty": "medium",
+  "context": "The context is disturbing incidents of substance abuse resulting in tragic consequences and reflections on addiction and recovery.",
+  "question": "Whose example demonstrates severe compulsion-issues around nicotine and sugar?",
+  "alternatives": [
+    "Hal's personal tutor",
+    "Anjali Velcounte",
+    "Estan Tropuché",
+    "Hal Incandenza "
+  ],
+  "answer": "Hal Incandenza "
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "5 - Contemporary/Sartre/Existentialism is a humanism/Sartre.md",
+  "difficulty": "medium",
+  "context": "The context is an exploration of key concepts in Sartre's existentialism, focusing on the idea that existence precedes essence, the responsibility we have in creating our own values, and the ethical implications of freedom and bad faith.",
+  "question": "What does Sartre mean by the concept of \"bad faith,\" as discussed in Existence Precedes Essence?",
+  "alternatives": [
+    "a. Honesty and integrity",
+    "b. Self-deception or denial of freedom and responsibility",
+    "c. Good intentions",
+    "d. Optimism Provides the right Answer"
+  ],
+  "answer": "b. Self-deception or denial of freedom and responsibility"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "4 - Modern/Hegel/History.md",
+  "difficulty": "Medium",
+  "context": "The context is about Hegel's philosophy of history, which focuses on history as a process leading to the realization of human freedom and the discovery of the spirit's concept.",
+  "question": "What does Hegel believe is the meaning of history?",
+  "alternatives": [
+    "History is the process whereby the spirit discovers itself and its own concept.",
+    "History is the grasp of new knowledge.",
+    "History is the discovery of unknown events.",
+    "History is the interpretation of past occurrences."
+  ],
+  "answer": "History is the process whereby the spirit discovers itself and its own concept."
+},{
+  "category": "Arts/Literature",
+  "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
+  "difficulty": "hard",
+  "context": "The context is a detailed analysis of Fyodor Dostoevsky's novel \"Crime and Punishment,\" focusing on philosophical, psychological, and moral themes within the book, accompanied by personal reflections and character insights.",
+  "question": "Why did Raskolnikov ultimately decide to confess to the murders he committed?",
+  "alternatives": [
+    "Out of fear of getting caught",
+    "Because he felt a profound sense of guilt",
+    "To prove his theory about extraordinary people",
+    "Due to an overwhelming desire for punishment"
+  ],
+  "answer": "Due to an overwhelming desire for punishment"
+}
 ]
+

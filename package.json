@@ -1,0 +1,21 @@
+{
+  "name": "notes2quiz",
+  "version": "1.0.0",
+  "description": "A quiz application that generates questions from JSON data",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "quiz",
+    "education",
+    "json",
+    "http-server"
+  ],
+  "author": "Davi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -92,28 +92,33 @@ class QuizApp {
     displayQuestion() {
         const question = this.currentQuestion;
         
-        // Update question number
-        this.questionNumberEl.textContent = `Question #${question.questionNumber}`;
+        // Update question header with category and difficulty
+        this.questionNumberEl.textContent = `${question.category} - ${question.difficulty}`;
         
-        // Parse and display question text
-        const { questionText, options } = this.parseQuestion(question.question);
-        this.questionTextEl.textContent = questionText;
+        // Display question text directly (no need to parse embedded options)
+        this.questionTextEl.textContent = question.question;
         
         // Clear previous options
         this.answerOptionsEl.innerHTML = '';
         
-        // Create answer options
-        options.forEach((option, index) => {
+        // Create answer options from alternatives array
+        question.alternatives.forEach((alternative, index) => {
             const optionEl = document.createElement('div');
             optionEl.className = 'answer-option';
+            
+            // Map index to letter: 0->A, 1->B, 2->C, 3->D
+            const letters = ['A', 'B', 'C', 'D'];
+            const letter = letters[index];
+            const text = alternative; // Use the full alternative text
+            
             optionEl.innerHTML = `
-                <span class="option-letter">${option.letter}</span>
-                ${option.text}
+                <span class="option-letter">${letter}</span>
+                ${text}
             `;
             
             optionEl.addEventListener('click', () => {
                 if (!this.hasAnswered) {
-                    this.selectAnswer(option.letter, optionEl);
+                    this.selectAnswer(text, optionEl);
                 }
             });
             
@@ -121,44 +126,15 @@ class QuizApp {
         });
     }
 
-    parseQuestion(questionText) {
-        // Split the question text to separate the actual question from the options
-        const lines = questionText.split('\n').filter(line => line.trim());
-        
-        const questionLines = [];
-        const options = [];
-        let inOptions = false;
-        
-        lines.forEach(line => {
-            const trimmedLine = line.trim();
-            const optionMatch = trimmedLine.match(/^([A-D])\)\s*(.+)$/);
-            
-            if (optionMatch) {
-                inOptions = true;
-                options.push({
-                    letter: optionMatch[1],
-                    text: optionMatch[2]
-                });
-            } else if (!inOptions) {
-                questionLines.push(line);
-            }
-        });
-        
-        return {
-            questionText: questionLines.join('\n'),
-            options: options
-        };
-    }
-
-    selectAnswer(selectedLetter, selectedElement) {
+    selectAnswer(text, selectedElement) {
         if (this.hasAnswered) return;
         
         this.hasAnswered = true;
         
-        // Get correct answer from response
-        const correctLetter = this.extractCorrectAnswer(this.currentQuestion.response);
-        const isCorrect = selectedLetter === correctLetter;
-        
+        // Get correct answer from the new answer field
+        const correctText = this.currentQuestion.answer;
+        const isCorrect = text === correctText;
+
         // Update stats
         this.stats.questionsAnswered++;
         if (isCorrect) {
@@ -172,19 +148,26 @@ class QuizApp {
             option.classList.add('disabled');
             const optionLetter = option.querySelector('.option-letter').textContent;
             
-            if (optionLetter === correctLetter) {
+            if (isCorrect) {
                 option.classList.add('correct');
-            } else if (optionLetter === selectedLetter && !isCorrect) {
+            } else if (optionLetter === 'A' && !isCorrect) {
                 option.classList.add('incorrect');
             }
         });
         
         // Show result
-        this.showResult(isCorrect, selectedLetter, correctLetter);
+        this.showResult(isCorrect, 'A', 'A');
     }
 
-    extractCorrectAnswer(responseText) {
-        // Extract the correct answer letter from various response formats
+    extractCorrectAnswer(answerText) {
+        // Handle the new answer format: "b. Self-deception or denial of freedom and responsibility"
+        // Extract the letter from the beginning of the answer
+        const letterMatch = answerText.match(/^([a-dA-D])[\.\)]/);
+        if (letterMatch) {
+            return letterMatch[1].toUpperCase();
+        }
+        
+        // Fallback patterns for various answer formats
         const patterns = [
             /([A-D])\)/,           // Pattern: A), B), C), D)
             /\b([A-D])\b/,         // Pattern: single letter A, B, C, D
@@ -193,15 +176,15 @@ class QuizApp {
         ];
         
         for (const pattern of patterns) {
-            const match = responseText.match(pattern);
+            const match = answerText.match(pattern);
             if (match) {
                 return match[1].toUpperCase();
             }
         }
         
-        // Fallback: return first letter found
-        const fallbackMatch = responseText.match(/[A-D]/);
-        return fallbackMatch ? fallbackMatch[0] : 'A';
+        // Final fallback: return first letter found
+        const fallbackMatch = answerText.match(/[A-D]/i);
+        return fallbackMatch ? fallbackMatch[0].toUpperCase() : 'A';
     }
 
     showResult(isCorrect, selectedLetter, correctLetter) {
@@ -215,16 +198,18 @@ class QuizApp {
         // Show the correct answer explanation
         this.correctAnswerEl.textContent = `Correct answer: ${correctLetter}) ${this.getOptionText(correctLetter)}`;
         
-        // Show the full response from the JSON
-        this.fullResponseEl.textContent = this.currentQuestion.response;
+        // Show the full answer from the JSON (new format uses 'answer' field)
+        this.fullResponseEl.textContent = this.currentQuestion.answer;
         
         this.resultSectionEl.style.display = 'block';
     }
 
     getOptionText(letter) {
-        const { options } = this.parseQuestion(this.currentQuestion.question);
-        const option = options.find(opt => opt.letter === letter);
-        return option ? option.text : '';
+        // Map letter back to index: A->0, B->1, C->2, D->3
+        const letterToIndex = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
+        const index = letterToIndex[letter.toUpperCase()];
+        
+        return this.currentQuestion.alternatives[index] || '';
     }
 
     hideResult() {
