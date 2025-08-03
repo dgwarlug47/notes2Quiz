@@ -124,8 +124,12 @@ class SimpleQuizApp {
         this.elements.questionCounter.textContent =
             `Question ${this.currentQuestionIndex + 1} of ${this.questions.length}`;
         // Display question
+        const contextHtml = this.currentQuestion.context
+            ? `<div class="question-context">${this.currentQuestion.context}</div>`
+            : '';
         this.elements.questionText.innerHTML = `
             <div class="question-category">${this.currentQuestion.category} - ${this.currentQuestion.difficulty}</div>
+            ${contextHtml}
             <div class="question-content">${this.currentQuestion.question}</div>
         `;
         // Show appropriate input method based on mode

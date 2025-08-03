@@ -178,6 +178,18 @@ header p {
     display: inline-block;
 }
 
+.question-context {
+    background: rgba(108, 117, 125, 0.1);
+    border-left: 4px solid #6c757d;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #495057;
+    font-style: italic;
+}
+
 .question-content {
     font-size: 1.3rem;
     font-weight: 500;
@@ -616,6 +628,12 @@ header p {
     
     .question-content {
         font-size: 1.1rem;
+    }
+    
+    .question-context {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        margin-bottom: 15px;
     }
     
     .option-button {

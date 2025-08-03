@@ -176,8 +176,13 @@ class SimpleQuizApp {
             `Question ${this.currentQuestionIndex + 1} of ${this.questions.length}`;
 
         // Display question
+        const contextHtml = this.currentQuestion.context 
+            ? `<div class="question-context">${this.currentQuestion.context}</div>` 
+            : '';
+            
         this.elements.questionText.innerHTML = `
             <div class="question-category">${this.currentQuestion.category} - ${this.currentQuestion.difficulty}</div>
+            ${contextHtml}
             <div class="question-content">${this.currentQuestion.question}</div>
         `;
 
