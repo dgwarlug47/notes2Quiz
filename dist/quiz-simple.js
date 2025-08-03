@@ -182,15 +182,6 @@ class SimpleQuizApp {
                 </div>
             `;
         }
-        // Show full explanation if available
-        if (this.currentQuestion?.answer) {
-            this.elements.feedbackMessage.innerHTML += `
-                <div class="explanation">
-                    <h4>📝 Explanation:</h4>
-                    <p>${this.currentQuestion.answer}</p>
-                </div>
-            `;
-        }
         this.elements.feedbackContainer.style.display = 'block';
         this.elements.nextButton.style.display = 'block';
     }
