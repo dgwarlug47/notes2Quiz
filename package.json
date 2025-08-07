@@ -8,7 +8,9 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node server.js",
-    "serve": "npm run build && npm start"
+    "serve": "npm run build && npm start",
+    "start:dev": "npm run build && node server.js",
+    "start:simple": "node simple-server.js"
   },
   "keywords": [
     "quiz",

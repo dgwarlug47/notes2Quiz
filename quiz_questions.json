@@ -533,6 +533,45 @@
     "Due to an overwhelming desire for punishment"
   ],
   "answer": "Due to an overwhelming desire for punishment"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "1- Classical/Nichomeanican ethics/summary.md",
+  "difficulty": "Easy",
+  "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
+  "question": "What is the ultimate goal of human life according to Aristotle?",
+  "alternatives": [
+    "Pleasure",
+    "Wealth",
+    "Honor",
+    "Eudaimonia (flourishing or happiness)"
+  ],
+  "answer": "Eudaimonia (flourishing or happiness)"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "1- Classical/Nichomeanican ethics/summary.md",
+  "difficulty": "Easy",
+  "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
+  "question": "What are the types of intellectual virtues according to Aristotle?",
+  "alternatives": [
+    "Phronesis, Sophia, Nous, Episteme, Techne",
+    "Phronesis, Sophia, Nous, Episteme, Hexis",
+    "Phronesis, Sophia, Nous, Telos, Techne",
+    "Phronesis, Sophia, Energeia, Episteme, Techne"
+  ],
+  "answer": "Phronesis, Sophia, Nous, Episteme, Techne"
+},{
+  "category": "Humanities/Philosophy",
+  "specific": "1- Classical/Nichomeanican ethics/summary.md",
+  "difficulty": "Easy",
+  "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
+  "question": "How does Eudaimonia feels like according to Aristotle?",
+  "alternatives": [
+    "Wholeness, Steady Purposefulness, Deep Satisfaction",
+    "Wholeness, Steady Purposefulness, A feeling of intense pleasure",
+    "Wholeness, A temporary emotional high, Deep Satisfaction",
+    "High level status, Steady Purposefulness, Deep Satisfaction"
+  ],
+  "answer": "Wholeness, Steady Purposefulness, Deep Satisfaction"
 }
 ]
 
