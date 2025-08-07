@@ -60,6 +60,13 @@ const server = createServer((req, res) => {
         // Handle different routes
         if (pathname === '/' || pathname === '/index.html' || pathname === '/quiz-simple.html') {
             serveFile(res, 'quiz-simple.html', 'text/html');
+        } else if (pathname === '/favicon.ico') {
+            // Handle favicon request - return 204 No Content to avoid 404
+            res.writeHead(204, { 
+                'Content-Type': 'image/x-icon',
+                'Cache-Control': 'public, max-age=86400' // Cache for 1 day
+            });
+            res.end();
         } else if (pathname === '/quiz_questions.json' || pathname === '/api/questions') {
             res.setHeader('Content-Type', 'application/json');
             res.writeHead(200);
