@@ -1,12 +1,12 @@
 [build]
-  publish = "."
-  command = "npm run build"
+  publish = "out"
+  command = "npm run build && npm run export"
 
 [dev]
-  command = "npm run dev:server"
+  command = "npm run dev"
   port = 8888
-  targetPort = 8000
-  publish = "."
+  targetPort = 3000
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"

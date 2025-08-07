@@ -1,36 +1,28 @@
 {
-  "name": "notes2quiz",
+  "name": "notes2quiz-nextjs",
   "version": "1.0.0",
-  "type": "module",
-  "description": "TypeScript quiz application that displays questions one at a time",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "start": "node server.js",
-    "dev:server": "npm run build && node server.js",
-    "serve": "npm run build && npm start",
-    "start:dev": "npm run build && node server.js",
-    "start:simple": "node simple-server.js",
-    "netlify:dev": "netlify dev",
-    "netlify:build": "npm run build",
-    "netlify:deploy": "netlify deploy --prod"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
   },
-  "keywords": [
-    "quiz",
-    "typescript",
-    "education",
-    "json",
-    "http-server"
-  ],
-  "author": "Davi",
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.1.6",
-    "@types/node": "^20.4.8"
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
   },
-  "dependencies": {}
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
