@@ -3,8 +3,13 @@ import { readFile, readFileSync } from 'fs';
 import { join, extname } from 'path';
 import { URL } from 'url';
 
-const PORT = 8000;
-const HOST = 'localhost';
+// Configuration for different environments
+const PORT = process.env.PORT || 8000;
+const HOST = process.env.HOST || (process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost');
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+console.log(`🚀 Starting Quiz Server in ${NODE_ENV} mode`);
+console.log(`📡 Host: ${HOST}, Port: ${PORT}`);
 
 // Load questions once at startup
 let questions = [];
@@ -14,16 +19,24 @@ try {
     console.log(`✅ Loaded ${questions.length} questions`);
 } catch (error) {
     console.error('❌ Error loading questions:', error);
+    questions = []; // Fallback to empty array
 }
 
 const server = createServer((req, res) => {
     const parsedUrl = new URL(req.url || '', `http://${req.headers.host}`);
     const pathname = parsedUrl.pathname;
     
-    // Enable CORS
+    // Enhanced CORS for development and production
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    
+    // Add security headers for production
+    if (NODE_ENV === 'production') {
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+        res.setHeader('X-Frame-Options', 'DENY');
+        res.setHeader('X-XSS-Protection', '1; mode=block');
+    }
 
     if (req.method === 'OPTIONS') {
         res.writeHead(200);
@@ -31,18 +44,35 @@ const server = createServer((req, res) => {
         return;
     }
 
-    console.log(`${new Date().toISOString()} - ${req.method} ${pathname}`);
+    // Enhanced logging
+    const timestamp = new Date().toISOString();
+    const userAgent = req.headers['user-agent'] || 'Unknown';
+    console.log(`[${timestamp}] ${req.method} ${pathname} - ${userAgent.substring(0, 50)}...`);
 
-    if (pathname === '/' || pathname === '/quiz-simple.html') {
-        serveFile(res, 'quiz-simple.html', 'text/html');
-    } else if (pathname === '/quiz_questions.json') {
-        res.setHeader('Content-Type', 'application/json');
-        res.writeHead(200);
-        res.end(JSON.stringify(questions, null, 2));
-    } else {
-        // Serve static files
-        const filePath = pathname.substring(1); // Remove leading slash
-        serveStaticFile(res, filePath);
+    try {
+        // Security: Prevent directory traversal
+        if (pathname.includes('..') || pathname.includes('~')) {
+            res.writeHead(403, { 'Content-Type': 'text/plain' });
+            res.end('Forbidden: Invalid path');
+            return;
+        }
+
+        // Handle different routes
+        if (pathname === '/' || pathname === '/index.html' || pathname === '/quiz-simple.html') {
+            serveFile(res, 'quiz-simple.html', 'text/html');
+        } else if (pathname === '/quiz_questions.json' || pathname === '/api/questions') {
+            res.setHeader('Content-Type', 'application/json');
+            res.writeHead(200);
+            res.end(JSON.stringify(questions, null, 2));
+        } else {
+            // Serve static files
+            const filePath = pathname.substring(1); // Remove leading slash
+            serveStaticFile(res, filePath);
+        }
+    } catch (error) {
+        console.error('❌ Server error:', error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Internal Server Error');
     }
 });
 
@@ -102,14 +132,47 @@ function getContentType(ext) {
 server.listen(PORT, HOST, () => {
     console.log(`🚀 Quiz server running at http://${HOST}:${PORT}/`);
     console.log(`📝 Open http://${HOST}:${PORT}/ to start the quiz`);
-    console.log(`🛑 Press Ctrl+C to stop the server`);
+    console.log(`🌍 Environment: ${NODE_ENV}`);
+    console.log(`� Serving ${questions.length} questions`);
+    console.log(`�🛑 Press Ctrl+C to stop the server`);
 });
 
+// Enhanced error handling
 server.on('error', (error) => {
     if (error.code === 'EADDRINUSE') {
         console.error(`❌ Port ${PORT} is already in use. Please try a different port.`);
+    } else if (error.code === 'EACCES') {
+        console.error(`❌ Permission denied. Try running on a different port.`);
     } else {
         console.error('❌ Server error:', error);
     }
+    process.exit(1);
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+    console.log('📡 SIGTERM received, shutting down gracefully...');
+    server.close(() => {
+        console.log('🔌 Server closed');
+        process.exit(0);
+    });
+});
+
+process.on('SIGINT', () => {
+    console.log('\n📡 SIGINT received, shutting down gracefully...');
+    server.close(() => {
+        console.log('🔌 Server closed');
+        process.exit(0);
+    });
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (error) => {
+    console.error('❌ Uncaught Exception:', error);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
     process.exit(1);
 });

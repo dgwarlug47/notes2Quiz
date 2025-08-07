@@ -8,9 +8,13 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node server.js",
+    "dev:server": "npm run build && node server.js",
     "serve": "npm run build && npm start",
     "start:dev": "npm run build && node server.js",
-    "start:simple": "node simple-server.js"
+    "start:simple": "node simple-server.js",
+    "netlify:dev": "netlify dev",
+    "netlify:build": "npm run build",
+    "netlify:deploy": "netlify deploy --prod"
   },
   "keywords": [
     "quiz",
