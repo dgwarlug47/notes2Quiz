@@ -1,0 +1,3 @@
+# Netlify redirects file
+/favicon.ico /profile-pic.jpeg 200
+/*  /quiz-simple.html 200

@@ -61,12 +61,8 @@ const server = createServer((req, res) => {
         if (pathname === '/' || pathname === '/index.html' || pathname === '/quiz-simple.html') {
             serveFile(res, 'quiz-simple.html', 'text/html');
         } else if (pathname === '/favicon.ico') {
-            // Handle favicon request - return 204 No Content to avoid 404
-            res.writeHead(204, { 
-                'Content-Type': 'image/x-icon',
-                'Cache-Control': 'public, max-age=86400' // Cache for 1 day
-            });
-            res.end();
+            // Serve the profile picture as favicon
+            serveFile(res, 'profile-pic.jpeg', 'image/x-icon');
         } else if (pathname === '/quiz_questions.json' || pathname === '/api/questions') {
             res.setHeader('Content-Type', 'application/json');
             res.writeHead(200);
@@ -95,6 +91,12 @@ function serveFile(res, filename, contentType) {
         }
         
         res.setHeader('Content-Type', contentType);
+        
+        // Add cache headers for favicon
+        if (contentType === 'image/x-icon') {
+            res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 1 day
+        }
+        
         res.writeHead(200);
         res.end(data);
     });
@@ -105,6 +107,13 @@ function serveStaticFile(res, filePath) {
     
     readFile(fullPath, (err, data) => {
         if (err) {
+            // Special handling for favicon.ico - serve profile picture as fallback
+            if (filePath === 'favicon.ico') {
+                console.log('📄 Favicon not found, serving profile picture as fallback');
+                serveFile(res, 'profile-pic.jpeg', 'image/x-icon');
+                return;
+            }
+            
             res.writeHead(404, { 'Content-Type': 'text/plain' });
             res.end('File not found');
             return;
@@ -114,6 +123,12 @@ function serveStaticFile(res, filePath) {
         const contentType = getContentType(ext);
         
         res.setHeader('Content-Type', contentType);
+        
+        // Add cache headers for favicon
+        if (ext === '.ico' || filePath === 'favicon.ico') {
+            res.setHeader('Cache-Control', 'public, max-age=86400');
+        }
+        
         res.writeHead(200);
         res.end(data);
     });
