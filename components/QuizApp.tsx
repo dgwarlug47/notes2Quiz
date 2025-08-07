@@ -14,6 +14,14 @@ interface QuizQuestion {
 
 type AnswerLetter = 'A' | 'B' | 'C' | 'D';
 
+interface QuizState {
+  currentQuestionIndex: number;
+  questionsAttempted: number;
+  correctCount: number;
+  isTextMode: boolean;
+  shuffledQuestions: QuizQuestion[];
+}
+
 export default function QuizApp() {
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -32,8 +40,55 @@ export default function QuizApp() {
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [restoringFromCheckpoint, setRestoringFromCheckpoint] = useState(false);
 
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Save quiz state to localStorage
+  const saveState = useCallback(() => {
+    if (questions.length === 0) return;
+    
+    const state: QuizState = {
+      currentQuestionIndex,
+      questionsAttempted,
+      correctCount,
+      isTextMode,
+      shuffledQuestions: questions
+    };
+    
+    try {
+      localStorage.setItem('quizCheckpoint', JSON.stringify(state));
+    } catch (error) {
+      console.warn('Failed to save quiz state:', error);
+    }
+  }, [currentQuestionIndex, questionsAttempted, correctCount, isTextMode, questions]);
+
+  // Load quiz state from localStorage
+  const loadState = useCallback((): QuizState | null => {
+    try {
+      const savedState = localStorage.getItem('quizCheckpoint');
+      if (savedState) {
+        return JSON.parse(savedState) as QuizState;
+      }
+    } catch (error) {
+      console.warn('Failed to load quiz state:', error);
+    }
+    return null;
+  }, []);
+
+  // Clear saved state
+  const clearSavedState = useCallback(() => {
+    try {
+      localStorage.removeItem('quizCheckpoint');
+    } catch (error) {
+      console.warn('Failed to clear quiz state:', error);
+    }
+  }, []);
+
+  // Save state whenever relevant data changes
+  useEffect(() => {
+    saveState();
+  }, [saveState]);
 
   // Load questions
   useEffect(() => {
@@ -45,7 +100,23 @@ export default function QuizApp() {
         }
         const data = await response.json();
         
-        // Shuffle questions using Fisher-Yates algorithm
+        // Check for saved state first
+        const savedState = loadState();
+        
+        if (savedState && savedState.shuffledQuestions.length > 0) {
+          // Restore from checkpoint
+          setRestoringFromCheckpoint(true);
+          setQuestions(savedState.shuffledQuestions);
+          setCurrentQuestionIndex(savedState.currentQuestionIndex);
+          setQuestionsAttempted(savedState.questionsAttempted);
+          setCorrectCount(savedState.correctCount);
+          setIsTextMode(savedState.isTextMode);
+          setLoading(false);
+          setTimeout(() => setRestoringFromCheckpoint(false), 2000); // Show message for 2 seconds
+          return;
+        }
+        
+        // No saved state, shuffle questions using Fisher-Yates algorithm
         const shuffled = [...data];
         for (let i = shuffled.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -62,7 +133,7 @@ export default function QuizApp() {
     };
 
     loadQuestions();
-  }, []);
+  }, [loadState]);
 
   const extractCorrectAnswer = useCallback((answerText: string): AnswerLetter => {
     if (!currentQuestion) return 'A';
@@ -164,7 +235,7 @@ export default function QuizApp() {
     return (
       <div className="loading">
         <div className="spinner"></div>
-        <p>Loading questions...</p>
+        <p>{restoringFromCheckpoint ? 'Restoring from checkpoint...' : 'Loading questions...'}</p>
       </div>
     );
   }
@@ -183,6 +254,11 @@ export default function QuizApp() {
       ? Math.round((correctCount / questionsAttempted) * 100)
       : 0;
 
+    // Clear saved state when quiz is complete
+    useEffect(() => {
+      clearSavedState();
+    }, [clearSavedState]);
+
     return (
       <div className="quiz-complete">
         <h2>🎊 Quiz Complete!</h2>
@@ -193,7 +269,13 @@ export default function QuizApp() {
           <p><strong>Correct Answers:</strong> {correctCount}</p>
           <p><strong>Accuracy:</strong> {finalAccuracy}%</p>
         </div>
-        <button onClick={() => window.location.reload()} className="restart-button">
+        <button 
+          onClick={() => {
+            clearSavedState();
+            window.location.reload();
+          }} 
+          className="restart-button"
+        >
           Start Over
         </button>
       </div>
@@ -202,6 +284,12 @@ export default function QuizApp() {
 
   return (
     <div className="container">
+      {restoringFromCheckpoint && (
+        <div className="checkpoint-notification">
+          📍 Restored from checkpoint - continuing where you left off!
+        </div>
+      )}
+      
       <header>
         <h1>
           <Image 
@@ -214,6 +302,23 @@ export default function QuizApp() {
           Vamos Argentina Quiz Generator
         </h1>
         <p>Answer one question at a time</p>
+        <div className="checkpoint-controls">
+          <div className="checkpoint-indicator">
+            💾 Progress auto-saved
+          </div>
+          <button 
+            onClick={() => {
+              if (confirm('Are you sure you want to restart the quiz? This will clear your progress.')) {
+                clearSavedState();
+                window.location.reload();
+              }
+            }}
+            className="restart-quiz-button"
+            title="Start over from the beginning"
+          >
+            🔄 Restart Quiz
+          </button>
+        </div>
       </header>
 
       <main className="question-container">
