@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/notes2Quiz' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/notes2Quiz' : '',
+  // Remove assetPrefix and basePath for Netlify deployment
+  // These are typically used for GitHub Pages deployment
 }
 
 module.exports = nextConfig
