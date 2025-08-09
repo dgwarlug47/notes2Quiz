@@ -572,6 +572,32 @@
     "High level status, Steady Purposefulness, Deep Satisfaction"
   ],
   "answer": "Wholeness, Steady Purposefulness, Deep Satisfaction"
+},{
+  "category": "Humanities/History",
+  "specific": "4 - Modern/Hegel/History.md",
+  "difficulty": "Easy",
+  "context": "The context is about inventions at Capitalism and their historical significance.",
+  "question": "What are the main 6 icons of progress on the history of capitalism?",
+  "alternatives": [
+    "The wheel, the plow, the assembly line, Personal Computer, iPhone, ChatGPT",
+    "Steam Engine, Ford Model T, The factory, the bank, the stock market, the telephone",
+    "Steam Engine, Ford Model T, Television, Personal Computer, iPhone, ChatGPT",
+    "Agriculture, Writing, Gunpowder, Steam Engine, Nuclear Energy, Space Technology"
+  ],
+  "answer": "Steam Engine, Ford Model T, Television, Personal Computer, iPhone, ChatGPT"
+},{
+  "category": "Humanities/History",
+  "specific": "4 - Modern/Hegel/History.md",
+  "difficulty": "Easy",
+  "context": "The context is about Hegel and his understanding on what is the spirit",
+  "question": "What are the 3 decompositions of the spirit according to Hegel?",
+  "alternatives": [
+    "The theoretical, practical and aesthetic spirit",
+    "The individual, collective and universal spirit",
+    "The subjective, objective and absolute spirit",
+    "The rational, emotional and intuitive spirit"
+  ],
+  "answer": "The subjective, objective and absolute spirit"
 }
 ]
 
