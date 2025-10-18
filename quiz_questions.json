@@ -298,5 +298,20 @@
     ],
     "answer": "The subjective, objective and absolute spirit",
     "show": true
-  }
+  },
+  {
+  "category": "Arts/Literature",
+  "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
+  "difficulty": "Medium",
+  "context": "The context is a detailed look at the themes discussed in the book 'Infinite Jest,' including addiction, loneliness, American culture, and the complexities of the Korean Mafia.",
+  "question": "Which are characteristics of Post modernism",
+  "alternatives": [
+  "Irony, pastiche, rejection of grand narratives, intertextuality, fragmentation",
+  "Hedonism leads to ultimate joy and fulfillment, benefiting individual sentiment",
+  "Focus on strict realism, universal truths, and linear progress",
+  "Emphasis on tradition, objective morality, and fixed meaning"
+  ],
+  "answer": "Irony, pastiche, rejection of grand narratives, intertextuality, fragmentation",
+  "show": true
+}
 ]
