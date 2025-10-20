@@ -75,38 +75,9 @@
     "show": false
   },
   {
-    "category": "Science/Natural Science",
-    "specific": "Biology/Taxonomy/main.md",
-    "difficulty": "Hard",
-    "context": "The context is a brief overview of the six kingdoms of life based on their cellular structure, nutrition, and reproduction methods.",
-    "question": "In which kingdom do organisms perform photosynthesis using chlorophyll?",
-    "alternatives": [
-      "Animalia",
-      "Plantae",
-      "Fungi",
-      "Protista"
-    ],
-    "answer": "Protista",
-    "show": false
-  },
-  {
-    "category": "Arts/Literature",
-    "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
-    "difficulty": "Medium",
-    "context": "The context is Dante's progression through the levels of heaven, meeting souls who embody different virtues and values.",
-    "question": "Who explains the providential role of the Roman Empire in God's plan?",
-    "alternatives": [
-      "Emperor Justinian",
-      "Augustus",
-      "Marcus Aurelius",
-      "Constantine"
-    ],
-    "answer": "Constantine"
-  },
-  {
     "category": "Science/Social Sciences",
     "specific": "History/Rome/Republic/Middle Republic/middle_republic.md",
-    "difficulty": "Medium",
+    "difficulty": "Hard",
     "context": "The context is the Guerra Cimbria, specifically the Battle of Aquae Sextiae where Gaius Marius implemented military reforms to defeat the Germanic tribes.",
     "question": "Who led the Roman armies in the Battle of Aqua Sextia against the Germanic tribes?",
     "alternatives": [
@@ -116,36 +87,6 @@
       "Pompey the Great"
     ],
     "answer": "Gaius Marius"
-  },
-  {
-    "category": "Arts/Literature",
-    "specific": "Novels/Germany/(1924) The Magic Mountain/summary.md",
-    "difficulty": "Medium",
-    "context": "The context is a deep dive into the philosophical and political debates within a unique sanatorium setting, as portrayed in Thomas Mann's *The Magic Mountain*.",
-    "question": "What genre is *The Magic Mountain* considered to be?",
-    "alternatives": [
-      "Mystery",
-      "Bildungsroman",
-      "Romance",
-      "Science Fiction"
-    ],
-    "answer": "Bildungsroman",
-    "show": false
-  },
-  {
-    "category": "Arts/Literature",
-    "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
-    "difficulty": "Medium",
-    "context": "The context is a detailed discussion about the themes, characters, and philosophical aspects of the book \"Crime and Punishment\" by Fyodor Dostoevsky.",
-    "question": "What philosophical perspective does Sonya character embody in \"Crime and Punishment\"?",
-    "alternatives": [
-      "Christianity",
-      "Hedonism",
-      "Übermensch",
-      "Utilitarianism"
-    ],
-    "answer": "Christianity",
-    "show": true
   },
   {
     "category": "Humanities/Philosophy",
@@ -163,21 +104,6 @@
     "show": false
   },
   {
-    "category": "Arts/Performing arts",
-    "specific": "Moving pictures/Cinema/Critics/2010s/Midnight in Paris/midnight_in_paris.md",
-    "difficulty": "Medium",
-    "context": "The context is a personal reflection on the movie \"Midnight in Paris\" by a viewer who initially didn't understand its appeal but grew to appreciate its magical portrayal of Paris and the characters within.",
-    "question": "What stands out as the main central theme of the movie Midnight in Paris?",
-    "alternatives": [
-      "Exploration of class struggles and wealth among the characters",
-      "Immersion into the fascinating culture and history of Paris",
-      "Focus on powerful emotions and complex relationships",
-      "Reflection on modern technological advances and its impact on society "
-    ],
-    "answer": "Immersion into the fascinating culture and history of Paris",
-    "show": false
-  },
-  {
     "category": "Arts/Literature",
     "specific": "Novels/United States of America/(1965) Dune/characters.md",
     "difficulty": "Hard",
@@ -190,21 +116,6 @@
       "Muad’Dib"
     ],
     "answer": "Duke Leto Atreides",
-    "show": false
-  },
-  {
-    "category": "Spare/Games",
-    "specific": "Chess/Openings/openings.md",
-    "difficulty": "Medium",
-    "context": "The context is basic opening strategies for the King's pawn in chess, including controlling the center with pawns, developing knights and bishops, and examples of different openings such as the Italian Game and French Defense.",
-    "question": "Which opening leads to the Giucco Piano classical setting?",
-    "alternatives": [
-      "Ruy Lopez",
-      "Italian Game",
-      "French Defense",
-      "Scilian Defense"
-    ],
-    "answer": "Italian Game",
     "show": false
   },
   {
@@ -253,36 +164,6 @@
     "show": true
   },
   {
-    "category": "Humanities/Philosophy",
-    "specific": "4 - Modern/Hegel/Dialetic.md",
-    "difficulty": "Medium",
-    "context": "The context is the explanation of the three dialectic moments in Hegel's philosophy and how they progress from abstract to speculative to reach the Absolute.",
-    "question": "What distinguishes Hegel's dialectic from Plato's?",
-    "alternatives": [
-      "Metaphysical generelization",
-      "There is nothing new",
-      "Poggers",
-      "I have no idea"
-    ],
-    "answer": "I have no idea",
-    "show": true
-  },
-  {
-    "category": "Arts/Performing arts",
-    "specific": "Music/Analysis/Classic Folk/summary.md",
-    "difficulty": "Medium",
-    "context": "The context is a song referencing a woman named Mrs. Robinson and the complex emotions surrounding her character, including themes of love, prayer, secrecy, and loneliness.",
-    "question": "What does Simon mean by \"Heaven holds a place for those who pray\"?",
-    "alternatives": [
-      "God blesses those who believe in him",
-      "Heaven is reserved for those who repent sins",
-      "Praying is a requirement to enter heaven",
-      "He is being ironic"
-    ],
-    "answer": "He is being ironic",
-    "show": true
-  },
-  {
     "category": "Science/Natural Science",
     "specific": "Psychology/Social Psychology/syndromes.md",
     "difficulty": "Hard",
@@ -326,81 +207,6 @@
     ],
     "answer": "Ghana",
     "show": false
-  },
-  {
-    "category": "Arts/Visual arts",
-    "specific": "Painting/Surrealism/surrealism.md",
-    "difficulty": "Medium",
-    "context": "The context is a discussion of Surrealism and appreciation for the works of Magritte.",
-    "question": "Which painting by René Magritte features a man with an apple hiding his face?",
-    "alternatives": [
-      "The Lovers",
-      "Life is not a dream",
-      "The Son of a man",
-      "The Princes of charm"
-    ],
-    "answer": "The Son of a man",
-    "show": false
-  },
-  {
-    "category": "Science/Social Sciences",
-    "specific": "History/Wolrd War I/basics.md",
-    "difficulty": "Medium",
-    "context": "The context is the causes of World War I, specifically Germany's motivations for imperial expansion and the alliances that were formed during the war.",
-    "question": "What was the primary motivation behind Wilson's decision to lead the United States into World War I?",
-    "alternatives": [
-      "United states was making a lot of money by selling goods to Britain",
-      "Germany's resumption of submarine attacks on passenger and merchant ships",
-      "Zimmerman Telegram",
-      "Germany's resumption of submarine attacks on passenger and merchant ships"
-    ],
-    "answer": "Germany's resumption of submarine attacks on passenger and merchant ships",
-    "show": false
-  },
-  {
-    "category": "Humanities/Philosophy",
-    "specific": "5 - Contemporary/Foucault/Discipline and punish/Discipline and punish.md",
-    "difficulty": "Medium",
-    "context": "The context is an analysis of changes in forms of discipline and punishment in Western penal systems based on historical documents from France.",
-    "question": "According to Foucault's analysis in \"Discipline and Punish,\" what is the main idea behind the philosophy in society/government at the modern era?",
-    "alternatives": [
-      "Efficiency regulating the relationship between knowledge and power",
-      "Humanitarian concerns driving reform efforts",
-      "Normalizing power structures to replace repressive power",
-      "Elimination of individual freedom in favor of collective order"
-    ],
-    "answer": "Normalizing power structures to replace repressive power",
-    "show": true
-  },
-  {
-    "category": "Science/Social Sciences",
-    "specific": "History/Rome/culture.md",
-    "difficulty": "Medium",
-    "context": "The context is family, where adultery and the expectations of marriage were heavily influenced by societal norms and gender roles at the time.",
-    "question": "What was the definition of adultery in ancient societies?",
-    "alternatives": [
-      "Any sexual relationship outside of marriage",
-      "A man having sex with a woman who wasn't his wife",
-      "Adultery was only considered when cheating with unmarried individuals",
-      "A man having sex with a married woman who was not his wife."
-    ],
-    "answer": "A man having sex with a married woman who was not his wife.",
-    "show": true
-  },
-  {
-    "category": "Arts/Visual arts",
-    "specific": "Painting/Surrealism/surrealism.md",
-    "difficulty": "Medium",
-    "context": "The context is a brief overview of surrealism highlighting the works of Magritte.",
-    "question": "Who is the painter known for the image \"The Lovers\"?",
-    "alternatives": [
-      "Max Ernst",
-      "Paul Delvaux",
-      "Rene Magritte",
-      "Salvador Dali"
-    ],
-    "answer": "Rene Magritte",
-    "show": true
   },
   {
     "category": "Arts/Literature",

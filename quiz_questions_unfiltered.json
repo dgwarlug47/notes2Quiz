@@ -127,20 +127,6 @@
   "answer": "The isolated vulnerability caused by competition",
   "show": false
 },{
-  "category": "Science/Natural Science",
-  "specific": "Biology/Taxonomy/main.md",
-  "difficulty": "Hard",
-  "context": "The context is a brief overview of the six kingdoms of life based on their cellular structure, nutrition, and reproduction methods.",
-  "question": "In which kingdom do organisms perform photosynthesis using chlorophyll?",
-  "alternatives": [
-    "Animalia",
-    "Plantae",
-    "Fungi",
-    "Protista"
-  ],
-  "answer": "Protista",
-  "show": false
-},{
   "category": "Science/Social Sciences",
   "specific": "History/Rome/basics.md",
   "difficulty": "Easy",
@@ -170,7 +156,7 @@
 },{
   "category": "Science/Social Sciences",
   "specific": "History/Rome/Republic/Middle Republic/middle_republic.md",
-  "difficulty": "Medium",
+  "difficulty": "Hard",
   "context": "The context is the Guerra Cimbria, specifically the Battle of Aquae Sextiae where Gaius Marius implemented military reforms to defeat the Germanic tribes.",
   "question": "Who led the Roman armies in the Battle of Aqua Sextia against the Germanic tribes?",
   "alternatives": [
@@ -631,7 +617,7 @@
 },{
   "category": "Humanities/History",
   "specific": "4 - Modern/Hegel/History.md",
-  "difficulty": "Easy",
+  "difficulty": "Medium",
   "context": "The context is about Hegel and his understanding on what is the spirit",
   "question": "What are the 3 decompositions of the spirit according to Hegel?",
   "alternatives": [
