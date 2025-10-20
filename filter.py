@@ -9,7 +9,7 @@ with open(INPUT_FILE, 'r', encoding='utf-8') as infile:
     data = json.load(infile)
 
 # Filter items where 'show' is True
-filtered = [item for item in data if item.get('show') is True]
+filtered = [item for item in data if not (item.get('difficulty').lower() == 'easy')]
 
 # Write the filtered items to the output file
 with open(OUTPUT_FILE, 'w', encoding='utf-8') as outfile:

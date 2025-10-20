@@ -1,18 +1,18 @@
 [
   {
-    "category": "Science/Social Sciences",
-    "specific": "History/Rome/Republic/Fall of Republic/fall_of_republic.md",
-    "difficulty": "Easy",
-    "context": "This text discusses the fall of the Roman Republic, focusing on the actions and impact of Julius Caesar.",
-    "question": "What was the reason behind Julius Caesar crossing the Rubicon River?",
+    "category": "Arts/Literature",
+    "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
+    "difficulty": "Hard",
+    "context": "This text describes Dante's journey through the various levels of Heaven in his work \"The Divine Comedy.\"",
+    "question": "What is the main theme of Dante's encounter with the souls in the sphere of Mars in the Divine Comedy?",
     "alternatives": [
-      "A negotiation for political positions with the Senate",
-      "To avoid being prosecuted upon his return to Rome",
-      "For military advancement with his army",
-      "An escape from his enemies"
+      "Devotion to religious principles",
+      "Sacrifice for Christianity",
+      "Love conquering all",
+      "Wisdom through contemplation"
     ],
-    "answer": "To avoid being prosecuted upon his return to Rome",
-    "show": true
+    "answer": "Wisdom through contemplation",
+    "show": false
   },
   {
     "category": "Arts/Performing arts",
@@ -28,6 +28,21 @@
     ],
     "answer": "Joe DiMaggio",
     "show": true
+  },
+  {
+    "category": "Science/Natural Science",
+    "specific": "Urban Geography/USA/Manhattan/Upper East side/ues.md",
+    "difficulty": "Hard",
+    "context": "The text provides a detailed overview of the Upper East Side in New York City, covering aspects like history, personalities, landmarks, films, and books related to the area.",
+    "question": "What was the reason that allowed those of old money to move to the Upper East Side as well as new families in 1895?",
+    "alternatives": [
+      "Monetary success of Caroline Astor",
+      "Integration of old and new upper class represented through Caroline Astor moving to the area",
+      "Developement of a luxurious mansion",
+      "Opening of public parks"
+    ],
+    "answer": "Integration of old and new upper class represented through Caroline Astor moving to the area",
+    "show": false
   },
   {
     "category": "Arts/Literature",
@@ -46,6 +61,79 @@
   },
   {
     "category": "Arts/Literature",
+    "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
+    "difficulty": "Hard",
+    "context": "The context is the intricate examination of literary themes and philosophical concepts within the story \"Infinite Jest,\" weaving together elements of addiction, tennis as a metaphor for modern life, American culture critique, and deep insights into the human condition.",
+    "question": "What did Clipperton's devastating action highlight about success?",
+    "alternatives": [
+      "His immense psychological burden from the competitive nature of Capitalism",
+      "The clinging desire for Success leads to catastrophic consequences",
+      "The deep despair of falling short of one's potential",
+      "The isolated vulnerability caused by competition"
+    ],
+    "answer": "The isolated vulnerability caused by competition",
+    "show": false
+  },
+  {
+    "category": "Science/Natural Science",
+    "specific": "Biology/Taxonomy/main.md",
+    "difficulty": "Hard",
+    "context": "The context is a brief overview of the six kingdoms of life based on their cellular structure, nutrition, and reproduction methods.",
+    "question": "In which kingdom do organisms perform photosynthesis using chlorophyll?",
+    "alternatives": [
+      "Animalia",
+      "Plantae",
+      "Fungi",
+      "Protista"
+    ],
+    "answer": "Protista",
+    "show": false
+  },
+  {
+    "category": "Arts/Literature",
+    "specific": "Novels/Italy/(1321) Divine Comedy/Paradise/summary.md",
+    "difficulty": "Medium",
+    "context": "The context is Dante's progression through the levels of heaven, meeting souls who embody different virtues and values.",
+    "question": "Who explains the providential role of the Roman Empire in God's plan?",
+    "alternatives": [
+      "Emperor Justinian",
+      "Augustus",
+      "Marcus Aurelius",
+      "Constantine"
+    ],
+    "answer": "Constantine"
+  },
+  {
+    "category": "Science/Social Sciences",
+    "specific": "History/Rome/Republic/Middle Republic/middle_republic.md",
+    "difficulty": "Medium",
+    "context": "The context is the Guerra Cimbria, specifically the Battle of Aquae Sextiae where Gaius Marius implemented military reforms to defeat the Germanic tribes.",
+    "question": "Who led the Roman armies in the Battle of Aqua Sextia against the Germanic tribes?",
+    "alternatives": [
+      "Gaius Marius",
+      "Mario Corleone",
+      "Julius Caesar",
+      "Pompey the Great"
+    ],
+    "answer": "Gaius Marius"
+  },
+  {
+    "category": "Arts/Literature",
+    "specific": "Novels/Germany/(1924) The Magic Mountain/summary.md",
+    "difficulty": "Medium",
+    "context": "The context is a deep dive into the philosophical and political debates within a unique sanatorium setting, as portrayed in Thomas Mann's *The Magic Mountain*.",
+    "question": "What genre is *The Magic Mountain* considered to be?",
+    "alternatives": [
+      "Mystery",
+      "Bildungsroman",
+      "Romance",
+      "Science Fiction"
+    ],
+    "answer": "Bildungsroman",
+    "show": false
+  },
+  {
+    "category": "Arts/Literature",
     "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
     "difficulty": "Medium",
     "context": "The context is a detailed discussion about the themes, characters, and philosophical aspects of the book \"Crime and Punishment\" by Fyodor Dostoevsky.",
@@ -61,6 +149,66 @@
   },
   {
     "category": "Humanities/Philosophy",
+    "specific": "1- Classical/Greek Ethics.md",
+    "difficulty": "Hard",
+    "context": "The context is stoicism, a philosophical concept by Zeno of Citium characterized by a belief in living in harmony with nature and an emphasis on self-control and acceptance of fate.",
+    "question": "What is the goal of life according to Zeno of Citium?",
+    "alternatives": [
+      "Living without desires",
+      "Striving for material wealth",
+      "Internal discontentment",
+      "Living in agreement with nature"
+    ],
+    "answer": "Living in agreement with nature",
+    "show": false
+  },
+  {
+    "category": "Arts/Performing arts",
+    "specific": "Moving pictures/Cinema/Critics/2010s/Midnight in Paris/midnight_in_paris.md",
+    "difficulty": "Medium",
+    "context": "The context is a personal reflection on the movie \"Midnight in Paris\" by a viewer who initially didn't understand its appeal but grew to appreciate its magical portrayal of Paris and the characters within.",
+    "question": "What stands out as the main central theme of the movie Midnight in Paris?",
+    "alternatives": [
+      "Exploration of class struggles and wealth among the characters",
+      "Immersion into the fascinating culture and history of Paris",
+      "Focus on powerful emotions and complex relationships",
+      "Reflection on modern technological advances and its impact on society "
+    ],
+    "answer": "Immersion into the fascinating culture and history of Paris",
+    "show": false
+  },
+  {
+    "category": "Arts/Literature",
+    "specific": "Novels/United States of America/(1965) Dune/characters.md",
+    "difficulty": "Hard",
+    "context": "The context is character descriptions from the novel Dune, including the protagonist Paul Atreides, his mother Jessica, and other important characters like Thufir Hawat, Gurney Halleck, and Naib Stilgar.",
+    "question": "Who is the father of Paul Atreides, the protagonist of Dune?",
+    "alternatives": [
+      "Duke Leto Atreides",
+      "Baron Harkonnen",
+      "Dr. Wellington Yueh",
+      "Muad’Dib"
+    ],
+    "answer": "Duke Leto Atreides",
+    "show": false
+  },
+  {
+    "category": "Spare/Games",
+    "specific": "Chess/Openings/openings.md",
+    "difficulty": "Medium",
+    "context": "The context is basic opening strategies for the King's pawn in chess, including controlling the center with pawns, developing knights and bishops, and examples of different openings such as the Italian Game and French Defense.",
+    "question": "Which opening leads to the Giucco Piano classical setting?",
+    "alternatives": [
+      "Ruy Lopez",
+      "Italian Game",
+      "French Defense",
+      "Scilian Defense"
+    ],
+    "answer": "Italian Game",
+    "show": false
+  },
+  {
+    "category": "Humanities/Philosophy",
     "specific": "4 - Modern/Kant/Critique of Pure Reason/main.md",
     "difficulty": "Hard",
     "context": "The context is a discussion of Kant's revolution in the understanding of synthetic judgments.",
@@ -73,6 +221,21 @@
     ],
     "answer": "Synthetic a priori",
     "show": true
+  },
+  {
+    "category": "Humanities/Philosophy",
+    "specific": "5 - Contemporary/Foucault/Madness And Civilization/main.md",
+    "difficulty": "Hard",
+    "context": "The context is, in the Modern era, the creation of medical institutions for confining mentally insane people under the supervision of medical doctors, born out of the dual cultural motives of curing the insane away from poor families and confining socially undesirable individuals to protect society.",
+    "question": "In which era did medical institutions for confining mentally insane people under the supervision of medical doctors first become established?",
+    "alternatives": [
+      "Middle Ages",
+      "Renaissance",
+      "Contemporary era",
+      "Modern era"
+    ],
+    "answer": "Modern era",
+    "show": false
   },
   {
     "category": "Arts/Visual arts",
@@ -135,19 +298,64 @@
     "show": true
   },
   {
-    "category": "Humanities/Philosophy",
-    "specific": "Political Philosophy/Marx.md",
-    "difficulty": "Easy",
-    "context": "The context is that individuals are alienated from their work, the products of their labor, themselves, and each other in capitalist society.",
-    "question": "How does Marx and Ludwig Feuerbach view religion?",
+    "category": "Arts/Performing arts",
+    "specific": "Moving pictures/Cinema/Critics/2010s/Manchester by the sea/manchester_by_the_sea.md",
+    "difficulty": "Hard",
+    "context": "The context is a deep exploration of loss, grief, and guilt in the film 'Manchester by the Sea,' focusing on the protagonist Lee's emotional struggle and pain.",
+    "question": "Who plays the main character Lee in the film \"Manchester by the Sea\"?",
     "alternatives": [
-      "God is created as the image of people",
-      "Forfeit their human powers",
-      "Believes in traditional Christian theology",
-      "Religion is opium of the people"
+      "Casey Affleck",
+      "Ben Affleck",
+      "Matt Damon",
+      "Tom Hardy"
     ],
-    "answer": "Religion is opium of the people",
-    "show": true
+    "answer": "Casey Affleck",
+    "show": false
+  },
+  {
+    "category": "Spare/Games",
+    "specific": "Sports/Football/World cup/summary.md",
+    "difficulty": "Hard",
+    "context": "The context is discussing the history of the FIFA World Cup from 1958 to the present, highlighting key moments and matches from each tournament.",
+    "question": "Which country played against Uruguay in the quarter-finals of the 2010 FIFA World Cup among the four teams mentioned?",
+    "alternatives": [
+      "Uruguay",
+      "Brazil",
+      "Ghana",
+      "Germany"
+    ],
+    "answer": "Ghana",
+    "show": false
+  },
+  {
+    "category": "Arts/Visual arts",
+    "specific": "Painting/Surrealism/surrealism.md",
+    "difficulty": "Medium",
+    "context": "The context is a discussion of Surrealism and appreciation for the works of Magritte.",
+    "question": "Which painting by René Magritte features a man with an apple hiding his face?",
+    "alternatives": [
+      "The Lovers",
+      "Life is not a dream",
+      "The Son of a man",
+      "The Princes of charm"
+    ],
+    "answer": "The Son of a man",
+    "show": false
+  },
+  {
+    "category": "Science/Social Sciences",
+    "specific": "History/Wolrd War I/basics.md",
+    "difficulty": "Medium",
+    "context": "The context is the causes of World War I, specifically Germany's motivations for imperial expansion and the alliances that were formed during the war.",
+    "question": "What was the primary motivation behind Wilson's decision to lead the United States into World War I?",
+    "alternatives": [
+      "United states was making a lot of money by selling goods to Britain",
+      "Germany's resumption of submarine attacks on passenger and merchant ships",
+      "Zimmerman Telegram",
+      "Germany's resumption of submarine attacks on passenger and merchant ships"
+    ],
+    "answer": "Germany's resumption of submarine attacks on passenger and merchant ships",
+    "show": false
   },
   {
     "category": "Humanities/Philosophy",
@@ -195,123 +403,18 @@
     "show": true
   },
   {
-    "category": "Humanities/Philosophy",
-    "specific": "4 - Modern/Hegel/History.md",
-    "difficulty": "Easy",
-    "context": "The context is about Hegel's philosophy of history, which focuses on history as a process leading to the realization of human freedom and the discovery of the spirit's concept.",
-    "question": "What does Hegel believe is the meaning of history?",
-    "alternatives": [
-      "History is the process whereby the spirit discovers itself and its own concept",
-      "History is the grasp of new knowledge",
-      "History is the discovery of unknown events",
-      "History is the interpretation of past occurrences"
-    ],
-    "answer": "History is the process whereby the spirit discovers itself and its own concept",
-    "show": true
-  },
-  {
     "category": "Arts/Literature",
-    "specific": "Novels/Russia/(1866) Crime and Punishment/summary.md",
-    "difficulty": "Easy",
-    "context": "The context is a detailed analysis of Fyodor Dostoevsky's novel \"Crime and Punishment,\" focusing on philosophical, psychological, and moral themes within the book, accompanied by personal reflections and character insights.",
-    "question": "Why did Raskolnikov ultimately decide to confess to the murders he committed?",
+    "specific": "Novels/United States of America/(1996) Infinite Jest/book 4.md",
+    "difficulty": "Hard",
+    "context": "The context is disturbing incidents of substance abuse resulting in tragic consequences and reflections on addiction and recovery.",
+    "question": "Whose example demonstrates severe compulsion-issues around nicotine and sugar?",
     "alternatives": [
-      "Out of fear of getting caught",
-      "Because he felt a profound moral obligation to do so",
-      "To prove his theory about extraordinary people",
-      "Due to an overwhelming desire for punishment"
+      "Hal's personal tutor",
+      "Anjali Velcounte",
+      "Estan Tropuché",
+      "Hal Incandenza "
     ],
-    "answer": "Due to an overwhelming desire for punishment",
-    "show": true
-  },
-  {
-    "category": "Humanities/Philosophy",
-    "specific": "1- Classical/Nichomeanican ethics/summary.md",
-    "difficulty": "Easy",
-    "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
-    "question": "What is the ultimate goal of human life according to Aristotle?",
-    "alternatives": [
-      "Pleasure",
-      "Wealth",
-      "Honor",
-      "Eudaimonia (flourishing or happiness)"
-    ],
-    "answer": "Eudaimonia (flourishing or happiness)",
-    "show": true
-  },
-  {
-    "category": "Humanities/Philosophy",
-    "specific": "1- Classical/Nichomeanican ethics/summary.md",
-    "difficulty": "Easy",
-    "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
-    "question": "What are the types of intellectual virtues according to Aristotle?",
-    "alternatives": [
-      "Phronesis, Sophia, Nous, Episteme, Techne",
-      "Phronesis, Sophia, Nous, Episteme, Hexis",
-      "Phronesis, Sophia, Nous, Telos, Techne",
-      "Phronesis, Sophia, Energeia, Episteme, Techne"
-    ],
-    "answer": "Phronesis, Sophia, Nous, Episteme, Techne",
-    "show": true
-  },
-  {
-    "category": "Humanities/Philosophy",
-    "specific": "1- Classical/Nichomeanican ethics/summary.md",
-    "difficulty": "Easy",
-    "context": "The context is a detailed analysis of Aristotle's Nicomachean Ethics, focusing on key concepts such as virtue, happiness, and the nature of the good life.",
-    "question": "How does Eudaimonia feels like according to Aristotle?",
-    "alternatives": [
-      "Wholeness, Steady Purposefulness, Deep Satisfaction",
-      "Wholeness, Steady Purposefulness, A feeling of intense pleasure",
-      "Wholeness, A temporary emotional high, Deep Satisfaction",
-      "High level status, Steady Purposefulness, Deep Satisfaction"
-    ],
-    "answer": "Wholeness, Steady Purposefulness, Deep Satisfaction",
-    "show": true
-  },
-  {
-    "category": "Humanities/History",
-    "specific": "4 - Modern/Hegel/History.md",
-    "difficulty": "Easy",
-    "context": "The context is about inventions at Capitalism and their historical significance.",
-    "question": "What are the main 6 icons of progress on the history of capitalism?",
-    "alternatives": [
-      "The wheel, the plow, the assembly line, Personal Computer, iPhone, ChatGPT",
-      "Steam Engine, Ford Model T, The factory, the bank, the stock market, the telephone",
-      "Steam Engine, Ford Model T, Television, Personal Computer, iPhone, ChatGPT",
-      "Agriculture, Writing, Gunpowder, Steam Engine, Nuclear Energy, Space Technology"
-    ],
-    "answer": "Steam Engine, Ford Model T, Television, Personal Computer, iPhone, ChatGPT",
-    "show": true
-  },
-  {
-    "category": "Humanities/History",
-    "specific": "4 - Modern/Hegel/History.md",
-    "difficulty": "Easy",
-    "context": "The context is about Hegel and his understanding on what is the spirit",
-    "question": "What are the 3 decompositions of the spirit according to Hegel?",
-    "alternatives": [
-      "The theoretical, practical and aesthetic spirit",
-      "The individual, collective and universal spirit",
-      "The subjective, objective and absolute spirit",
-      "The rational, emotional and intuitive spirit"
-    ],
-    "answer": "The subjective, objective and absolute spirit",
-    "show": true
-  },
-  {
-  "category": "Arts/Literature",
-  "specific": "Novels/United States of America/(1996) Infinite Jest/Analysis/summary.md",
-  "difficulty": "Medium",
-  "context": "The context is a detailed look at the themes discussed in the book 'Infinite Jest,' including addiction, loneliness, American culture, and the complexities of the Korean Mafia.",
-  "question": "Which are characteristics of Post modernism",
-  "alternatives": [
-  "Irony, pastiche, rejection of grand narratives, intertextuality, fragmentation",
-  "Hedonism leads to ultimate joy and fulfillment, benefiting individual sentiment",
-  "Focus on strict realism, universal truths, and linear progress",
-  "Emphasis on tradition, objective morality, and fixed meaning"
-  ],
-  "answer": "Irony, pastiche, rejection of grand narratives, intertextuality, fragmentation",
-  "show": true
-}
+    "answer": "Hal Incandenza ",
+    "show": false
+  }
 ]
